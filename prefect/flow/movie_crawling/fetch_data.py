@@ -57,7 +57,7 @@ def fetch_and_save_movie_data(release_date_from, release_date_to, batch_size=10)
         logging.info("Collection 'movie_genres' already exists. Skipping genre retrieval.")
 
     # Fetch the full list of movies
-    movies = scraper.fetch_movies(limit=20)
+    movies = scraper.fetch_movies(limit=10)
     
     # Chia nhỏ danh sách phim thành các batch và xử lý từng batch một
     for movie_batch in batch_list(movies, batch_size):

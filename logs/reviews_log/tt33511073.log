@@ -1,0 +1,4 @@
+2024-10-25 23:27:10,635 - INFO - Fetching reviews for movie_id: tt33511073
+2024-10-25 23:27:14,268 - INFO - Accessed URL: https://www.imdb.com/title/tt33511073/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:27:14,337 - INFO - Total reviews found: 0
+2024-10-25 23:27:14,338 - INFO - No reviews found for Movie ID tt33511073

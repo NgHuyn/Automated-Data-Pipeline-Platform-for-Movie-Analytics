@@ -1,0 +1,4 @@
+2024-10-23 22:31:57,427 - INFO - Fetching reviews for movie_id: tt33744610
+2024-10-23 22:32:02,006 - INFO - Accessed URL: https://www.imdb.com/title/tt33744610/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:32:02,044 - INFO - Total reviews found: 0
+2024-10-23 22:32:02,046 - INFO - No reviews found for Movie ID tt33744610

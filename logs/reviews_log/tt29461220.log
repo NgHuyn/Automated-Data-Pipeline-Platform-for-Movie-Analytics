@@ -1,0 +1,5 @@
+2024-10-25 23:27:53,280 - INFO - Fetching reviews for movie_id: tt29461220
+2024-10-25 23:27:56,579 - INFO - Accessed URL: https://www.imdb.com/title/tt29461220/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:27:56,647 - INFO - Total reviews found: 2
+2024-10-25 23:28:16,716 - INFO - Processed 2 reviews for Movie ID: tt29461220.
+2024-10-25 23:28:16,716 - INFO - Movie tt29461220 has 2/2 reviews

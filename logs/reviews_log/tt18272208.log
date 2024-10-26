@@ -1,0 +1,8 @@
+2024-10-25 23:22:13,035 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-25 23:22:16,036 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:22:16,058 - INFO - Total reviews found: 0
+2024-10-25 23:22:16,058 - INFO - No reviews found for Movie ID tt18272208
+2024-10-25 23:23:39,807 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-25 23:23:43,024 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:23:43,161 - INFO - Total reviews found: 0
+2024-10-25 23:23:43,161 - INFO - No reviews found for Movie ID tt18272208

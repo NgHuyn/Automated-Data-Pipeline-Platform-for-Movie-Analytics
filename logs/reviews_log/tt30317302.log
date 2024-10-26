@@ -73,3 +73,8 @@
 2024-10-22 20:54:34,175 - INFO - Total reviews found: 16
 2024-10-22 20:54:54,334 - INFO - Processed 16 reviews for Movie ID: tt30317302.
 2024-10-22 20:54:54,334 - INFO - Movie tt30317302 has 16/16 reviews
+2024-10-23 22:09:52,281 - INFO - Fetching reviews for movie_id: tt30317302
+2024-10-23 22:09:56,295 - INFO - Accessed URL: https://www.imdb.com/title/tt30317302/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:09:56,337 - INFO - Total reviews found: 16
+2024-10-23 22:10:16,505 - INFO - Processed 16 reviews for Movie ID: tt30317302.
+2024-10-23 22:10:16,505 - INFO - Movie tt30317302 has 16/16 reviews

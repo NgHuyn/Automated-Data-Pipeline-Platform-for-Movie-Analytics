@@ -1,0 +1,4 @@
+2024-10-25 23:27:38,899 - INFO - Fetching reviews for movie_id: tt19849020
+2024-10-25 23:27:42,211 - INFO - Accessed URL: https://www.imdb.com/title/tt19849020/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:27:42,242 - INFO - Total reviews found: 0
+2024-10-25 23:27:42,242 - INFO - No reviews found for Movie ID tt19849020

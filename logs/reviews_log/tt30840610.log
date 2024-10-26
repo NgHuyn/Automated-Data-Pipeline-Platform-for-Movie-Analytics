@@ -1,0 +1,4 @@
+2024-10-25 23:37:01,289 - INFO - Fetching reviews for movie_id: tt30840610
+2024-10-25 23:37:04,487 - INFO - Accessed URL: https://www.imdb.com/title/tt30840610/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:37:04,517 - INFO - Total reviews found: 0
+2024-10-25 23:37:04,518 - INFO - No reviews found for Movie ID tt30840610

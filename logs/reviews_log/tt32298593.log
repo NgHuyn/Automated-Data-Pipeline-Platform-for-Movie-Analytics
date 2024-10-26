@@ -1,0 +1,4 @@
+2024-10-25 23:29:06,226 - INFO - Fetching reviews for movie_id: tt32298593
+2024-10-25 23:29:09,475 - INFO - Accessed URL: https://www.imdb.com/title/tt32298593/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:29:09,519 - INFO - Total reviews found: 0
+2024-10-25 23:29:09,519 - INFO - No reviews found for Movie ID tt32298593

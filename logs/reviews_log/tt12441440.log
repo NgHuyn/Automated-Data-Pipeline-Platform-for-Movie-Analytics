@@ -1,0 +1,4 @@
+2024-10-23 22:33:36,371 - INFO - Fetching reviews for movie_id: tt12441440
+2024-10-23 22:33:39,611 - INFO - Accessed URL: https://www.imdb.com/title/tt12441440/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:33:39,632 - INFO - Total reviews found: 0
+2024-10-23 22:33:39,632 - INFO - No reviews found for Movie ID tt12441440

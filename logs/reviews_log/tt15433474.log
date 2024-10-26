@@ -1,0 +1,5 @@
+2024-10-25 23:29:50,490 - INFO - Fetching reviews for movie_id: tt15433474
+2024-10-25 23:29:54,079 - INFO - Accessed URL: https://www.imdb.com/title/tt15433474/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:29:54,155 - INFO - Total reviews found: 2
+2024-10-25 23:30:14,237 - INFO - Processed 2 reviews for Movie ID: tt15433474.
+2024-10-25 23:30:14,238 - INFO - Movie tt15433474 has 2/2 reviews

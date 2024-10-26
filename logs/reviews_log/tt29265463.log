@@ -18,3 +18,8 @@
 2024-10-22 10:54:37,226 - INFO - No 'More' button found, all reviews loaded.
 2024-10-22 10:54:57,290 - INFO - Processed 4 reviews for Movie ID: tt29265463, Title: Emotions of a Murder.
 2024-10-22 10:54:57,291 - INFO - Movie tt29265463 has 4/4 reviews
+2024-10-23 22:19:12,459 - INFO - Fetching reviews for movie_id: tt29265463
+2024-10-23 22:19:14,708 - INFO - Accessed URL: https://www.imdb.com/title/tt29265463/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:19:14,765 - INFO - Total reviews found: 4
+2024-10-23 22:19:35,016 - INFO - Processed 4 reviews for Movie ID: tt29265463.
+2024-10-23 22:19:35,018 - INFO - Movie tt29265463 has 4/4 reviews

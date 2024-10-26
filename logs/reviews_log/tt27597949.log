@@ -18,3 +18,8 @@
 2024-10-22 10:51:29,052 - INFO - No 'More' button found, all reviews loaded.
 2024-10-22 10:51:49,135 - INFO - Processed 1 reviews for Movie ID: tt27597949, Title: Succede anche nelle migliori famiglie.
 2024-10-22 10:51:49,136 - INFO - Movie tt27597949 has 1/1 reviews
+2024-10-23 22:16:24,168 - INFO - Fetching reviews for movie_id: tt27597949
+2024-10-23 22:16:27,639 - INFO - Accessed URL: https://www.imdb.com/title/tt27597949/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:16:27,684 - INFO - Total reviews found: 1
+2024-10-23 22:16:47,894 - INFO - Processed 1 reviews for Movie ID: tt27597949.
+2024-10-23 22:16:47,894 - INFO - Movie tt27597949 has 1/1 reviews

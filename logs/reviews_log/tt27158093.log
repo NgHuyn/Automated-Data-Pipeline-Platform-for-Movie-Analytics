@@ -119,3 +119,8 @@
 2024-10-22 22:13:41,923 - INFO - Total reviews found: 25
 2024-10-22 22:14:02,219 - INFO - Processed 25 reviews for Movie ID: tt27158093.
 2024-10-22 22:14:02,220 - INFO - Movie tt27158093 has 25/25 reviews
+2024-10-23 22:08:29,972 - INFO - Fetching reviews for movie_id: tt27158093
+2024-10-23 22:08:34,662 - INFO - Accessed URL: https://www.imdb.com/title/tt27158093/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:08:34,715 - INFO - Total reviews found: 25
+2024-10-23 22:08:55,222 - INFO - Processed 25 reviews for Movie ID: tt27158093.
+2024-10-23 22:08:55,222 - INFO - Movie tt27158093 has 25/25 reviews

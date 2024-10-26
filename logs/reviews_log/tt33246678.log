@@ -1,0 +1,4 @@
+2024-10-25 23:25:25,166 - INFO - Fetching reviews for movie_id: tt33246678
+2024-10-25 23:25:28,575 - INFO - Accessed URL: https://www.imdb.com/title/tt33246678/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:25:28,662 - INFO - Total reviews found: 0
+2024-10-25 23:25:28,663 - INFO - No reviews found for Movie ID tt33246678

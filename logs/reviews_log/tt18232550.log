@@ -34,3 +34,7 @@
 2024-10-22 20:55:08,852 - INFO - Accessed URL: https://www.imdb.com/title/tt18232550/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-22 20:55:10,944 - INFO - Total reviews found: 0
 2024-10-22 20:55:10,946 - INFO - No reviews found for Movie ID tt18232550
+2024-10-23 22:10:27,068 - INFO - Fetching reviews for movie_id: tt18232550
+2024-10-23 22:10:30,609 - INFO - Accessed URL: https://www.imdb.com/title/tt18232550/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:10:30,645 - INFO - Total reviews found: 0
+2024-10-23 22:10:30,649 - INFO - No reviews found for Movie ID tt18232550

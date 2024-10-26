@@ -1,0 +1,5 @@
+2024-10-23 22:29:49,473 - INFO - Fetching reviews for movie_id: tt32743167
+2024-10-23 22:29:53,140 - INFO - Accessed URL: https://www.imdb.com/title/tt32743167/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:29:53,192 - INFO - Total reviews found: 8
+2024-10-23 22:30:13,327 - INFO - Processed 8 reviews for Movie ID: tt32743167.
+2024-10-23 22:30:13,329 - INFO - Movie tt32743167 has 8/8 reviews

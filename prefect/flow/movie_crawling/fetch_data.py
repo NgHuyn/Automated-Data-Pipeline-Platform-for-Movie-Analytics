@@ -28,7 +28,7 @@ def save_to_mongo(data, collection_name, db):
         logging.error(f"Error saving to {collection_name}: {e}")
 
 def batch_list(data, batch_size):
-    """Chia dữ liệu thành các batch."""
+    """Split data into batches."""
     for i in range(0, len(data), batch_size):
         yield data[i:i + batch_size]
 
@@ -59,7 +59,7 @@ def fetch_and_save_movie_data(release_date_from, release_date_to, batch_size=10)
     # Fetch the full list of movies
     movies = scraper.fetch_movies()
     
-    # Chia nhỏ danh sách phim thành các batch và xử lý từng batch một
+    # Split the movie list into batches and process each batch one by one
     for movie_batch in batch_list(movies, batch_size):
         logging.info(f"Processing batch of {len(movie_batch)} movies.")
         

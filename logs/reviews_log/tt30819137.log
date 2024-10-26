@@ -18,3 +18,8 @@
 2024-10-22 10:48:17,590 - INFO - No 'More' button found, all reviews loaded.
 2024-10-22 10:48:37,703 - INFO - Processed 6 reviews for Movie ID: tt30819137, Title: Bigfoot Evidence: Oregon.
 2024-10-22 10:48:37,704 - INFO - Movie tt30819137 has 6/6 reviews
+2024-10-23 22:13:49,454 - INFO - Fetching reviews for movie_id: tt30819137
+2024-10-23 22:13:53,154 - INFO - Accessed URL: https://www.imdb.com/title/tt30819137/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:13:53,195 - INFO - Total reviews found: 6
+2024-10-23 22:14:13,465 - INFO - Processed 6 reviews for Movie ID: tt30819137.
+2024-10-23 22:14:13,468 - INFO - Movie tt30819137 has 6/6 reviews

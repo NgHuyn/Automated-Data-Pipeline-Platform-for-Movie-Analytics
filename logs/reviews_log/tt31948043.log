@@ -1,0 +1,9 @@
+2024-10-25 23:33:54,327 - INFO - Fetching reviews for movie_id: tt31948043
+2024-10-25 23:33:58,072 - INFO - Accessed URL: https://www.imdb.com/title/tt31948043/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:33:58,102 - INFO - Total reviews found: 114
+2024-10-25 23:34:02,194 - INFO - Clicked 'All' button successfully.
+2024-10-25 23:34:02,194 - INFO - Clicked 'All' button successfully.
+2024-10-25 23:34:02,202 - INFO - Starting to scroll to load all reviews.
+2024-10-25 23:34:04,216 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-25 23:34:24,703 - INFO - Processed 114 reviews for Movie ID: tt31948043.
+2024-10-25 23:34:24,709 - INFO - Movie tt31948043 has 114/114 reviews

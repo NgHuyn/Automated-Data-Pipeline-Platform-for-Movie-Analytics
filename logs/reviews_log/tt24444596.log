@@ -18,3 +18,8 @@
 2024-10-22 10:47:27,989 - INFO - No 'More' button found, all reviews loaded.
 2024-10-22 10:47:48,053 - INFO - Processed 1 reviews for Movie ID: tt24444596, Title: The Shelter.
 2024-10-22 10:47:48,054 - INFO - Movie tt24444596 has 1/1 reviews
+2024-10-23 22:13:13,966 - INFO - Fetching reviews for movie_id: tt24444596
+2024-10-23 22:13:17,809 - INFO - Accessed URL: https://www.imdb.com/title/tt24444596/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:13:17,845 - INFO - Total reviews found: 1
+2024-10-23 22:13:38,066 - INFO - Processed 1 reviews for Movie ID: tt24444596.
+2024-10-23 22:13:38,071 - INFO - Movie tt24444596 has 1/1 reviews

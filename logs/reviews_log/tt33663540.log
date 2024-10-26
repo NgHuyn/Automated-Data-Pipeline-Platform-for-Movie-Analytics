@@ -1,0 +1,4 @@
+2024-10-25 23:26:56,522 - INFO - Fetching reviews for movie_id: tt33663540
+2024-10-25 23:26:59,858 - INFO - Accessed URL: https://www.imdb.com/title/tt33663540/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:26:59,888 - INFO - Total reviews found: 0
+2024-10-25 23:26:59,889 - INFO - No reviews found for Movie ID tt33663540

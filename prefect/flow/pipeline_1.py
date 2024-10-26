@@ -8,8 +8,8 @@ def extract_and_load_movies(release_date_from, release_date_to, batch_size=10):
 
 @flow(name="Movie-ETL-History", log_prints=True)
 def movie_etl_flow():
-    release_date_from = '2024-01-01'
-    release_date_to = '2024-01-01'
+    release_date_from = '2024-10-20'
+    release_date_to = '2024-10-21'
     extract_and_load_movies(release_date_from, release_date_to, batch_size=10)
 
 # Execute the flow

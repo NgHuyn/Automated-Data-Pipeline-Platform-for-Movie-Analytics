@@ -10,14 +10,14 @@ from .utils import setup_movies_scraper_logger
 import math
 
 class MoviesScraper(BaseScraper):
-    def __init__(self, release_date_from='2024-01-01', release_date_to='2024-10-01'):
+    def __init__(self, release_date_from, release_date_to):
         super().__init__()
         self.release_date_from = release_date_from
         self.release_date_to = release_date_to
         self.movie_data = []
         self.logger = setup_movies_scraper_logger()  # Initialize new logger
 
-    def fetch_movies(self, limit=10):
+    def fetch_movies(self, limit=None):
             try:
                 url = f'https://www.imdb.com/search/title/?title_type=feature&release_date={self.release_date_from},{self.release_date_to}'
                 self.driver.get(url)

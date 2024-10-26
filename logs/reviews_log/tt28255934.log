@@ -18,3 +18,8 @@
 2024-10-22 10:58:31,461 - INFO - No 'More' button found, all reviews loaded.
 2024-10-22 10:58:51,530 - INFO - Processed 5 reviews for Movie ID: tt28255934, Title: The Kingfish 2.
 2024-10-22 10:58:51,532 - INFO - Movie tt28255934 has 5/5 reviews
+2024-10-23 22:22:13,428 - INFO - Fetching reviews for movie_id: tt28255934
+2024-10-23 22:22:17,769 - INFO - Accessed URL: https://www.imdb.com/title/tt28255934/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:22:17,820 - INFO - Total reviews found: 5
+2024-10-23 22:22:38,223 - INFO - Processed 5 reviews for Movie ID: tt28255934.
+2024-10-23 22:22:38,225 - INFO - Movie tt28255934 has 5/5 reviews

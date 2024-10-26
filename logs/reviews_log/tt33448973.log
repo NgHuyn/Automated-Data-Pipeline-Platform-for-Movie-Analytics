@@ -1,0 +1,4 @@
+2024-10-25 23:36:31,690 - INFO - Fetching reviews for movie_id: tt33448973
+2024-10-25 23:36:33,815 - INFO - Accessed URL: https://www.imdb.com/title/tt33448973/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:36:33,896 - INFO - Total reviews found: 0
+2024-10-25 23:36:33,897 - INFO - No reviews found for Movie ID tt33448973

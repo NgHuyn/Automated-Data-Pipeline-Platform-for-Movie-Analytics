@@ -1,0 +1,5 @@
+2024-10-25 23:26:05,115 - INFO - Fetching reviews for movie_id: tt33292689
+2024-10-25 23:26:08,584 - INFO - Accessed URL: https://www.imdb.com/title/tt33292689/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:26:08,616 - INFO - Total reviews found: 1
+2024-10-25 23:26:28,844 - INFO - Processed 1 reviews for Movie ID: tt33292689.
+2024-10-25 23:26:28,845 - INFO - Movie tt33292689 has 1/1 reviews

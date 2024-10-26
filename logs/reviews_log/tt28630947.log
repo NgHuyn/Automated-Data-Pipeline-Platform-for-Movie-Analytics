@@ -18,3 +18,8 @@
 2024-10-22 10:55:47,419 - INFO - No 'More' button found, all reviews loaded.
 2024-10-22 10:56:07,630 - INFO - Processed 8 reviews for Movie ID: tt28630947, Title: The Haunting in Rosemary Lane.
 2024-10-22 10:56:07,632 - INFO - Movie tt28630947 has 8/8 reviews
+2024-10-23 22:20:06,593 - INFO - Fetching reviews for movie_id: tt28630947
+2024-10-23 22:20:10,653 - INFO - Accessed URL: https://www.imdb.com/title/tt28630947/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:20:10,693 - INFO - Total reviews found: 8
+2024-10-23 22:20:31,003 - INFO - Processed 8 reviews for Movie ID: tt28630947.
+2024-10-23 22:20:31,005 - INFO - Movie tt28630947 has 8/8 reviews

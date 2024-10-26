@@ -14,3 +14,7 @@
 2024-10-22 10:45:45,302 - INFO - Accessed URL: https://www.imdb.com/title/tt11995448/reviews?sort=submissionDate&dir=desc
 2024-10-22 10:45:45,390 - INFO - Total reviews found: 0
 2024-10-22 10:45:45,391 - INFO - No reviews found for Movie ID tt11995448
+2024-10-23 22:12:06,837 - INFO - Fetching reviews for movie_id: tt11995448
+2024-10-23 22:12:10,294 - INFO - Accessed URL: https://www.imdb.com/title/tt11995448/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:12:10,336 - INFO - Total reviews found: 0
+2024-10-23 22:12:10,336 - INFO - No reviews found for Movie ID tt11995448

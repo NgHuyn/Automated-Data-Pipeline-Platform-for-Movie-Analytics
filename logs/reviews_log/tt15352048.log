@@ -38,3 +38,8 @@
 2024-10-22 10:46:38,401 - INFO - No 'More' button found, all reviews loaded.
 2024-10-22 10:46:58,489 - INFO - Processed 3 reviews for Movie ID: tt15352048, Title: Reloaded 2.
 2024-10-22 10:46:58,490 - INFO - Movie tt15352048 has 3/3 reviews
+2024-10-23 22:12:40,330 - INFO - Fetching reviews for movie_id: tt15352048
+2024-10-23 22:12:43,967 - INFO - Accessed URL: https://www.imdb.com/title/tt15352048/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:12:44,005 - INFO - Total reviews found: 3
+2024-10-23 22:13:04,231 - INFO - Processed 3 reviews for Movie ID: tt15352048.
+2024-10-23 22:13:04,231 - INFO - Movie tt15352048 has 3/3 reviews

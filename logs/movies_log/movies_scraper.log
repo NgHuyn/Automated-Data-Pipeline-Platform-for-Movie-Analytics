@@ -318,3 +318,26 @@ Stacktrace:
 2024-10-23 14:48:49,526 - INFO - MoviesScraper initialized with 0 clicks
 2024-10-23 14:48:49,763 - INFO - Finished extraction of movie data.
 2024-10-23 14:48:49,764 - INFO - Completed fetching movies. Total movies: 10
+2024-10-23 22:08:18,973 - INFO - Total reviews found: 126
+2024-10-23 22:08:18,973 - INFO - MoviesScraper initialized with 2 clicks
+2024-10-23 22:08:19,399 - INFO - Clicked 'Load More' button successfully.
+2024-10-23 22:08:21,639 - INFO - Clicked 'Load More' button successfully.
+2024-10-23 22:08:23,734 - INFO - Finished extraction of movie data.
+2024-10-23 22:08:23,734 - INFO - Completed fetching movies. Total movies: 100
+2024-10-23 22:29:42,278 - INFO - Total reviews found: 69
+2024-10-23 22:29:42,280 - INFO - MoviesScraper initialized with 1 clicks
+2024-10-23 22:29:42,385 - INFO - Clicked 'Load More' button successfully.
+2024-10-23 22:29:43,668 - INFO - Finished extraction of movie data.
+2024-10-23 22:29:43,669 - INFO - Completed fetching movies. Total movies: 69
+2024-10-25 23:22:06,278 - INFO - Total reviews found: 137
+2024-10-25 23:22:06,278 - INFO - MoviesScraper initialized with 2 clicks
+2024-10-25 23:22:06,362 - INFO - Clicked 'Load More' button successfully.
+2024-10-25 23:22:08,032 - INFO - Clicked 'Load More' button successfully.
+2024-10-25 23:22:09,320 - INFO - Finished extraction of movie data.
+2024-10-25 23:22:09,320 - INFO - Completed fetching movies. Total movies: 100
+2024-10-25 23:23:33,825 - INFO - Total reviews found: 137
+2024-10-25 23:23:33,826 - INFO - MoviesScraper initialized with 2 clicks
+2024-10-25 23:23:33,878 - INFO - Clicked 'Load More' button successfully.
+2024-10-25 23:23:34,917 - INFO - Clicked 'Load More' button successfully.
+2024-10-25 23:23:36,245 - INFO - Finished extraction of movie data.
+2024-10-25 23:23:36,245 - INFO - Completed fetching movies. Total movies: 137

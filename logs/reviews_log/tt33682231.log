@@ -1,0 +1,4 @@
+2024-10-25 23:36:04,625 - INFO - Fetching reviews for movie_id: tt33682231
+2024-10-25 23:36:08,048 - INFO - Accessed URL: https://www.imdb.com/title/tt33682231/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:36:08,071 - INFO - Total reviews found: 0
+2024-10-25 23:36:08,071 - INFO - No reviews found for Movie ID tt33682231

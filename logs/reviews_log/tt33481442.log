@@ -1,0 +1,4 @@
+2024-10-23 22:33:53,950 - INFO - Fetching reviews for movie_id: tt33481442
+2024-10-23 22:33:57,227 - INFO - Accessed URL: https://www.imdb.com/title/tt33481442/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:33:57,262 - INFO - Total reviews found: 0
+2024-10-23 22:33:57,264 - INFO - No reviews found for Movie ID tt33481442

@@ -1,0 +1,4 @@
+2024-10-25 23:31:41,902 - INFO - Fetching reviews for movie_id: tt26679009
+2024-10-25 23:31:45,826 - INFO - Accessed URL: https://www.imdb.com/title/tt26679009/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:31:45,857 - INFO - Total reviews found: 0
+2024-10-25 23:31:45,858 - INFO - No reviews found for Movie ID tt26679009

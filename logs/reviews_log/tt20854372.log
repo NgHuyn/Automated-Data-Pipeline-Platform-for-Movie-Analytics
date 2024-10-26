@@ -6,3 +6,7 @@
 2024-10-22 10:59:03,548 - INFO - Accessed URL: https://www.imdb.com/title/tt20854372/reviews?sort=submissionDate&dir=desc
 2024-10-22 10:59:05,639 - INFO - Total reviews found: 0
 2024-10-22 10:59:05,640 - INFO - No reviews found for Movie ID tt20854372
+2024-10-23 22:22:47,732 - INFO - Fetching reviews for movie_id: tt20854372
+2024-10-23 22:22:51,498 - INFO - Accessed URL: https://www.imdb.com/title/tt20854372/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:22:51,530 - INFO - Total reviews found: 0
+2024-10-23 22:22:51,530 - INFO - No reviews found for Movie ID tt20854372

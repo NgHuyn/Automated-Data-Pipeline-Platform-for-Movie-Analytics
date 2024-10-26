@@ -1,0 +1,4 @@
+2024-10-23 22:34:09,799 - INFO - Fetching reviews for movie_id: tt25188294
+2024-10-23 22:34:13,177 - INFO - Accessed URL: https://www.imdb.com/title/tt25188294/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:34:13,194 - INFO - Total reviews found: 0
+2024-10-23 22:34:13,209 - INFO - No reviews found for Movie ID tt25188294

@@ -1,0 +1,4 @@
+2024-10-25 23:28:30,828 - INFO - Fetching reviews for movie_id: tt29995494
+2024-10-25 23:28:34,176 - INFO - Accessed URL: https://www.imdb.com/title/tt29995494/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:28:34,206 - INFO - Total reviews found: 0
+2024-10-25 23:28:34,206 - INFO - No reviews found for Movie ID tt29995494

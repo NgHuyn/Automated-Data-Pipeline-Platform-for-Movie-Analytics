@@ -38,3 +38,8 @@
 2024-10-22 10:45:08,046 - INFO - No 'More' button found, all reviews loaded.
 2024-10-22 10:45:28,190 - INFO - Processed 3 reviews for Movie ID: tt28266209, Title: Sarkaaru Noukari.
 2024-10-22 10:45:28,190 - INFO - Movie tt28266209 has 3/3 reviews
+2024-10-23 22:11:31,199 - INFO - Fetching reviews for movie_id: tt28266209
+2024-10-23 22:11:34,956 - INFO - Accessed URL: https://www.imdb.com/title/tt28266209/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:11:35,046 - INFO - Total reviews found: 3
+2024-10-23 22:11:55,175 - INFO - Processed 3 reviews for Movie ID: tt28266209.
+2024-10-23 22:11:55,175 - INFO - Movie tt28266209 has 3/3 reviews

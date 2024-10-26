@@ -94,3 +94,8 @@
 2024-10-22 20:53:53,430 - INFO - Total reviews found: 24
 2024-10-22 20:54:13,834 - INFO - Processed 24 reviews for Movie ID: tt26902267.
 2024-10-22 20:54:13,837 - INFO - Movie tt26902267 has 24/24 reviews
+2024-10-23 22:09:14,353 - INFO - Fetching reviews for movie_id: tt26902267
+2024-10-23 22:09:19,044 - INFO - Accessed URL: https://www.imdb.com/title/tt26902267/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:09:19,086 - INFO - Total reviews found: 24
+2024-10-23 22:09:39,423 - INFO - Processed 24 reviews for Movie ID: tt26902267.
+2024-10-23 22:09:39,423 - INFO - Movie tt26902267 has 24/24 reviews

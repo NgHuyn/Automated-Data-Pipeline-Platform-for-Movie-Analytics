@@ -1,0 +1,4 @@
+2024-10-25 23:25:11,001 - INFO - Fetching reviews for movie_id: tt32915125
+2024-10-25 23:25:14,838 - INFO - Accessed URL: https://www.imdb.com/title/tt32915125/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:25:14,869 - INFO - Total reviews found: 0
+2024-10-25 23:25:14,869 - INFO - No reviews found for Movie ID tt32915125

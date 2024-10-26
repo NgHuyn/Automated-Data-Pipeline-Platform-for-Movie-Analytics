@@ -1,0 +1,5 @@
+2024-10-23 22:32:48,420 - INFO - Fetching reviews for movie_id: tt29560024
+2024-10-23 22:32:51,505 - INFO - Accessed URL: https://www.imdb.com/title/tt29560024/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:32:51,535 - INFO - Total reviews found: 1
+2024-10-23 22:33:11,640 - INFO - Processed 1 reviews for Movie ID: tt29560024.
+2024-10-23 22:33:11,642 - INFO - Movie tt29560024 has 1/1 reviews

@@ -1,0 +1,5 @@
+2024-10-25 23:31:56,834 - INFO - Fetching reviews for movie_id: tt32292009
+2024-10-25 23:32:00,310 - INFO - Accessed URL: https://www.imdb.com/title/tt32292009/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:32:00,342 - INFO - Total reviews found: 6
+2024-10-25 23:32:20,429 - INFO - Processed 6 reviews for Movie ID: tt32292009.
+2024-10-25 23:32:20,430 - INFO - Movie tt32292009 has 6/6 reviews

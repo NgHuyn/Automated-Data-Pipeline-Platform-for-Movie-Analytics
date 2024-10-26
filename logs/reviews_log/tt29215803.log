@@ -6,3 +6,7 @@
 2024-10-22 10:52:23,332 - INFO - Accessed URL: https://www.imdb.com/title/tt29215803/reviews?sort=submissionDate&dir=desc
 2024-10-22 10:52:25,448 - INFO - Total reviews found: 0
 2024-10-22 10:52:25,450 - INFO - No reviews found for Movie ID tt29215803
+2024-10-23 22:17:19,868 - INFO - Fetching reviews for movie_id: tt29215803
+2024-10-23 22:17:23,744 - INFO - Accessed URL: https://www.imdb.com/title/tt29215803/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:17:23,779 - INFO - Total reviews found: 0
+2024-10-23 22:17:23,779 - INFO - No reviews found for Movie ID tt29215803

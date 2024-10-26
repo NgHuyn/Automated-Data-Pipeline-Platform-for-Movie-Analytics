@@ -1,0 +1,4 @@
+2024-10-23 22:33:21,298 - INFO - Fetching reviews for movie_id: tt21903842
+2024-10-23 22:33:25,391 - INFO - Accessed URL: https://www.imdb.com/title/tt21903842/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:33:25,424 - INFO - Total reviews found: 0
+2024-10-23 22:33:25,424 - INFO - No reviews found for Movie ID tt21903842

@@ -1,0 +1,4 @@
+2024-10-25 23:33:37,185 - INFO - Fetching reviews for movie_id: tt21028588
+2024-10-25 23:33:40,923 - INFO - Accessed URL: https://www.imdb.com/title/tt21028588/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:33:40,955 - INFO - Total reviews found: 0
+2024-10-25 23:33:40,955 - INFO - No reviews found for Movie ID tt21028588

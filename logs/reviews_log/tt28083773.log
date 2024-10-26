@@ -1,0 +1,4 @@
+2024-10-25 23:29:23,575 - INFO - Fetching reviews for movie_id: tt28083773
+2024-10-25 23:29:25,633 - INFO - Accessed URL: https://www.imdb.com/title/tt28083773/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:29:25,713 - INFO - Total reviews found: 0
+2024-10-25 23:29:25,713 - INFO - No reviews found for Movie ID tt28083773

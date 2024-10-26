@@ -1,0 +1,4 @@
+2024-10-25 23:27:25,048 - INFO - Fetching reviews for movie_id: tt10974574
+2024-10-25 23:27:28,191 - INFO - Accessed URL: https://www.imdb.com/title/tt10974574/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-25 23:27:28,231 - INFO - Total reviews found: 0
+2024-10-25 23:27:28,232 - INFO - No reviews found for Movie ID tt10974574

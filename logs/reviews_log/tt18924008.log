@@ -1,0 +1,5 @@
+2024-10-23 22:31:01,311 - INFO - Fetching reviews for movie_id: tt18924008
+2024-10-23 22:31:04,749 - INFO - Accessed URL: https://www.imdb.com/title/tt18924008/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-23 22:31:04,781 - INFO - Total reviews found: 1
+2024-10-23 22:31:24,910 - INFO - Processed 1 reviews for Movie ID: tt18924008.
+2024-10-23 22:31:25,015 - INFO - Movie tt18924008 has 1/1 reviews

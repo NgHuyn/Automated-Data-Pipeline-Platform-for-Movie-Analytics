@@ -2,3 +2,11 @@
 2024-10-25 23:26:59,858 - INFO - Accessed URL: https://www.imdb.com/title/tt33663540/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:26:59,888 - INFO - Total reviews found: 0
 2024-10-25 23:26:59,889 - INFO - No reviews found for Movie ID tt33663540
+2024-10-26 23:29:30,395 - INFO - Fetching reviews for movie_id: tt33663540
+2024-10-26 23:29:33,403 - INFO - Accessed URL: https://www.imdb.com/title/tt33663540/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-26 23:29:33,428 - INFO - Total reviews found: 0
+2024-10-26 23:29:33,428 - INFO - No reviews found for Movie ID tt33663540
+2024-10-26 23:32:46,901 - INFO - Fetching reviews for movie_id: tt33663540
+2024-10-26 23:32:54,260 - INFO - Accessed URL: https://www.imdb.com/title/tt33663540/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-26 23:32:54,288 - INFO - Total reviews found: 0
+2024-10-26 23:32:54,288 - INFO - No reviews found for Movie ID tt33663540

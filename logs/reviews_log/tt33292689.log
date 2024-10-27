@@ -3,3 +3,15 @@
 2024-10-25 23:26:08,616 - INFO - Total reviews found: 1
 2024-10-25 23:26:28,844 - INFO - Processed 1 reviews for Movie ID: tt33292689.
 2024-10-25 23:26:28,845 - INFO - Movie tt33292689 has 1/1 reviews
+2024-10-26 23:28:39,527 - INFO - Fetching reviews for movie_id: tt33292689
+2024-10-26 23:28:43,960 - INFO - Accessed URL: https://www.imdb.com/title/tt33292689/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-26 23:28:43,985 - INFO - Total reviews found: 2
+2024-10-26 23:28:43,985 - INFO - 2 new reviews found for Movie ID tt33292689
+2024-10-26 23:29:04,051 - INFO - Processed 2 reviews for Movie ID: tt33292689.
+2024-10-26 23:29:04,052 - INFO - Movie tt33292689 has 2/2 reviews
+2024-10-26 23:32:04,589 - INFO - Fetching reviews for movie_id: tt33292689
+2024-10-26 23:32:11,902 - INFO - Accessed URL: https://www.imdb.com/title/tt33292689/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-26 23:32:12,007 - INFO - Total reviews found: 2
+2024-10-26 23:32:12,007 - INFO - 2 new reviews found for Movie ID tt33292689
+2024-10-26 23:32:32,078 - INFO - Processed 2 reviews for Movie ID: tt33292689.
+2024-10-26 23:32:32,078 - INFO - Movie tt33292689 has 2/2 reviews

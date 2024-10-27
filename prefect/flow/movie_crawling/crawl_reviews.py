@@ -17,10 +17,13 @@ class MovieReviewScraper(BaseScraper):
         self.clicks = 0  # Initialize click counter
         self.movie_info = { 
             'Movie ID': movie_id,
-            'Total Reviews': total_reviews,
-            'Last Date Review': last_date_review,
+            # 'Total Reviews': total_reviews,
+            # 'Last Date Review': last_date_review,
             'Reviews': []
         }
+        self.total_reviews = total_reviews
+        self.last_date_review = last_date_review
+
         self.is_scraping = True  # Flag to manage scraping status
 
         self.logger = setup_reviews_logger(movie_id) 
@@ -39,10 +42,16 @@ class MovieReviewScraper(BaseScraper):
                 if total_reviews == 0:
                     self.logger.info("No reviews found for Movie ID %s", self.movie_id)
                     return None
-                if total_reviews <= self.movie_info['Total Reviews']:
-                    self.logger.info("No new reviews found for Movie ID %s", self.movie_id)
-                    return None
-                new_reviews_count = total_reviews - self.movie_info['Total Reviews']
+                try:
+                    if total_reviews <= self.total_reviews:
+                        self.logger.info("No new reviews found for Movie ID %s", self.movie_id)
+                        return None
+                except Exception as e:
+                    self.logger.error("Error get total")
+                # new_reviews_count = total_reviews - self.movie_info['Total Reviews']
+                new_reviews_count = total_reviews - self.total_reviews
+                self.total_reviews = total_reviews
+                self.logger.info("%d new reviews found for Movie ID %s", new_reviews_count, self.movie_id)
 
                 # If reviews are available, attempt to load all or more reviews
                 self._load_reviews(new_reviews_count)  # Load more reviews by clicking the button
@@ -55,7 +64,7 @@ class MovieReviewScraper(BaseScraper):
                 soup = BeautifulSoup(html, 'html.parser')
 
                 # Extract reviews for the current movie and accumulate total_reviews
-                self.movie_info, num_reviews = self._extract_reviews(soup, self.movie_id)
+                self.movie_info, num_reviews = self._extract_reviews(soup, self.movie_id, self.last_date_review)
 
                 if num_reviews == 0:
                     self.logger.warning(f"No reviews found for Movie ID: {self.movie_id}.")
@@ -68,11 +77,15 @@ class MovieReviewScraper(BaseScraper):
                 # self.movie_info['Last Date Review'] = self.movie_info['Reviews'][0]['Date'] #updating last date review
                 for i in range(len(self.movie_info['Reviews'])):
                     if 'Date' in self.movie_info['Reviews'][i] and self.movie_info['Reviews'][i]['Date']:
-                        self.movie_info['Last Date Review'] = self.movie_info['Reviews'][i]['Date'] #updating last date review
+                        # self.movie_info['Last Date Review'] = self.movie_info['Reviews'][i]['Date'] #updating last date review
+                        self.last_date_review = self.movie_info['Reviews'][i]['Date'] #updating last date review
+
                         break  
                     else:
                         self.logger.warning(f"Review {i} is missing a date.")
-                self.movie_info['Total Reviews'] = num_reviews #updating new total reviews
+                # self.movie_info['Total Reviews'] = num_reviews #updating new total reviews
+                # self.total_reviews = num_reviews #updating new total reviews
+
 
             except Exception as e:
                 self.logger.error("Error in fetch_reviews: %s", str(e))
@@ -128,13 +141,11 @@ class MovieReviewScraper(BaseScraper):
         if new_reviews_count > 25:
             # 1. Try clicking the 'All' button first
             if click_button('//*[@id="__next"]/main/div/section/div/section/div/div[1]/section[1]/div[3]/div/span[2]/button/span/span', 'All'):
-                self.logger.info("Clicked 'All' button successfully.")
                 self._scroll_to_load_all()  # Scroll if 'All' button is clicked
                 return  # Stop after 'All' is clicked
 
             # 2. Try clicking the 'More' button if it exists
             if click_button('//*[@id="__next"]/main/div/section/div/section/div/div[1]/section[1]/div[3]/div/span[1]/button/span/span', 'More'):
-                self.logger.info("Clicked 'More' button successfully.")
                 return # Stop after 'More' is clicked
 
             # 3. Continuously click 'Load More' button until it no longer appears
@@ -175,7 +186,7 @@ class MovieReviewScraper(BaseScraper):
         
         return base_wait_time + additional_wait_time
 
-    def _extract_reviews(self, soup, movie_id):
+    def _extract_reviews(self, soup, movie_id, last_date):
         # Attempt to extract reviews using the primary selector
         reviews = soup.select('article.user-review-item')
 
@@ -187,20 +198,25 @@ class MovieReviewScraper(BaseScraper):
                 return 0  # Return 0 if no reviews found
 
         # Parse reviews and add them to the movie_info['Reviews'] list
+        count = 0
         for review in reviews:
             # Determine the button type (all vs. load more) based on the presence of specific elements
             button_type = "load_more" if review.select_one('span.rating-other-user-rating span') else "all"
             parsed_review = self._parse_review(review, button_type)
-
-            if self.movie_info['Last Date Review'] is not None:
-                if parsed_review['Date'] <= self.movie_info['Last Date Review']: # if it is the older review, stop the iteration
-                    break
-
+            
+            try:
+                if last_date is not None:
+                    # last_date = datetime.strptime(last_date, "%Y-%m-%d")
+                    if parsed_review['Date'] <= last_date:
+                        break
+            except Exception:
+                self.logger.error(f"Error at comparison Date")
             # Append the parsed review to the 'Reviews' list
             self.movie_info['Reviews'].append(parsed_review)
+            count += 1
 
-        self.logger.info(f"Processed {len(reviews)} reviews for Movie ID: {movie_id}.")
-        return self.movie_info, len(reviews) # Return the number of reviews processed
+        self.logger.info(f"Processed {count} reviews for Movie ID: {movie_id}.")
+        return self.movie_info, count # Return the number of reviews processed
     
     def convert_to_int(self, human_readable):
         """Convert human-readable numbers to integers."""

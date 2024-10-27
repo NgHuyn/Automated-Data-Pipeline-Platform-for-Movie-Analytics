@@ -1,0 +1,132 @@
+import pymongo
+import pandas as pd
+from dotenv import load_dotenv
+import os
+import logging
+import numpy as np
+
+logging.basicConfig(level=logging.INFO)
+
+class MongoDataExtractor:
+    def __init__(self):
+        """Initialize and configure MongoDB connection."""
+        load_dotenv()
+        self.db = self.connect_to_mongo()
+
+    def connect_to_mongo(self):
+        """Connect to MongoDB and return the database object."""
+        client = pymongo.MongoClient(os.getenv('MONGO_URI'))
+        db_name = os.getenv('MONGODB_DATABASE', 'default_db_name').replace(' ', '_')
+        return client[db_name]
+
+    def load_collection_as_dataframe(self, collection_name):
+        """Load MongoDB collection into a DataFrame."""
+        data = list(self.db[collection_name].find({}))
+        if not data:
+            logging.warning(f"No data found in collection: {collection_name}")
+        return pd.DataFrame(data)
+
+    def check_and_mark_processed(self, collection):
+        """Check if a collection is processed and mark it if not."""
+        if not self.db['processing_flags'].find_one({'collection': collection}):
+            self.db['processing_flags'].insert_one({'collection': collection})
+            return False
+        return True
+    
+    def process_all_collections(self):
+        """Load and transform all specified collections from MongoDB."""
+        
+        # Function to transform movie reviews DataFrame and map Movie ID to movie_id
+        def transform_movie_reviews(df, movie_details_df):
+            """Transform movie reviews DataFrame."""
+            required_columns = ['Movie ID', 'Reviews']
+            
+            # Check for required columns in the DataFrame
+            missing_columns = [col for col in required_columns if col not in df.columns]
+            if missing_columns:
+                logging.error(f"Missing columns in DataFrame: {missing_columns}")
+                return None
+
+            # Create a mapping from imdb_id to movie_id
+            imdb_id_to_movie_id = dict(zip(movie_details_df['imdb_id'], movie_details_df['id']))
+            reviews_data = []  # List to store transformed review data
+
+            # Iterate over each row in the DataFrame
+            for index, row in df.iterrows():
+                movie_id = row['Movie ID']
+                reviews = row['Reviews']
+                mapped_movie_id = imdb_id_to_movie_id.get(movie_id)
+                
+                if mapped_movie_id is None:
+                    logging.warning(f"Movie ID {movie_id} not found in movie_details.")
+                    continue  # Skip if the Movie ID is not found
+
+                # Iterate over each review and extract relevant information
+                for review in reviews:
+                    reviews_data.append({
+                        'movie_id': mapped_movie_id,
+                        'review_summary': review.get('Review Summary'),
+                        'review_text': review.get('Review'),
+                        'rating': review.get('Rating'),
+                        'author': review.get('Author'),
+                        'date': review.get('Date'),
+                        'helpful': review.get('Helpful'),
+                        'not_helpful': review.get('Not Helpful')
+                    })
+
+            return {'review': pd.DataFrame(reviews_data)}  # Return DataFrame of reviews
+
+        # Define transformations for each collection
+        transformations = {
+            'movie_genres': lambda df: {'genre': df.drop(columns=['_id']).rename(columns={'id': 'genre_id'})} 
+                                        if not self.check_and_mark_processed('movie_genres') else None,
+            'movie_details': lambda df: {
+                'movie': df[['id', 'title', 'budget', 'homepage', 'overview', 'popularity', 
+                            'release_date', 'revenue', 'runtime', 'status', 'tagline', 
+                            'vote_average', 'vote_count']].rename(columns={'id': 'movie_id'}).drop_duplicates(),
+                'movie_genre': pd.DataFrame([(row['id'], g['id']) for _, row in df.iterrows() for g in row['genres']], 
+                                            columns=['movie_id', 'genre_id'])
+            },
+            'movie_actor_credits': lambda df: {
+                'movie_cast': df[['id', 'character', 'order', 'movie_tmdb_id']].rename(columns={'id': 'actor_id', 'order': 'order_num', 'movie_tmdb_id': 'movie_id'}).drop_duplicates()
+            },
+            'movie_director_credits': lambda df: {
+                'movie_direction': df[['id', 'known_for_department', 'movie_tmdb_id']].rename(columns={'id': 'director_id', 'movie_tmdb_id': 'movie_id'}).drop_duplicates()
+            },
+            'actor_details': lambda df: {
+                'actor': df[['id', 'name', 'gender', 'birthday', 'deathday', 'popularity', 'place_of_birth']]
+                .rename(columns={'id': 'actor_id'})
+                .replace({'gender': {0: 'Not set / not specified', 1: 'Female', 2: 'Male', 3: 'Non-binary'}})
+                .replace({np.nan: None})
+                .drop_duplicates()
+            },
+            'director_details': lambda df: {
+                'director': df[['id', 'name', 'gender', 'birthday', 'deathday', 'popularity', 'place_of_birth']]
+                .rename(columns={'id': 'director_id'})
+                .replace({'gender': {0: 'Not set / not specified', 1: 'Female', 2: 'Male', 3: 'Non-binary'}})
+                .replace({np.nan: None})
+                .drop_duplicates()
+            },  
+            'movie_reviews': lambda df: transform_movie_reviews(df, movie_details_df) 
+        }
+
+        transformed_data = {}
+        # Load movie_details once to use for mapping
+        movie_details_df = self.load_collection_as_dataframe('movie_details')[['id', 'imdb_id']]
+
+        # Process each collection and apply transformations
+        for collection, transform_func in transformations.items():
+            df = self.load_collection_as_dataframe(collection)
+            if not df.empty:
+                collection_data = transform_func(df)
+                if collection_data is not None:
+                    transformed_data.update(collection_data)
+
+        # Check and mark processed for movie_genres at the end of processing
+        self.check_and_mark_processed('movie_genres')
+
+        return transformed_data
+
+# Instantiate the extractor and process the data
+# extractor = MongoDataExtractor()
+# transformed_data = extractor.process_all_collections()

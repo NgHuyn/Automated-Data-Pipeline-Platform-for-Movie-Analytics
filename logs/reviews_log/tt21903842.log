@@ -2,3 +2,19 @@
 2024-10-23 22:33:25,391 - INFO - Accessed URL: https://www.imdb.com/title/tt21903842/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-23 22:33:25,424 - INFO - Total reviews found: 0
 2024-10-23 22:33:25,424 - INFO - No reviews found for Movie ID tt21903842
+2024-10-27 22:39:44,572 - INFO - Fetching reviews for movie_id: tt21903842
+2024-10-27 22:39:52,398 - INFO - Accessed URL: https://www.imdb.com/title/tt21903842/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:39:52,439 - INFO - Total reviews found: 0
+2024-10-27 22:39:52,440 - INFO - No reviews found for Movie ID tt21903842
+2024-10-28 11:17:42,094 - INFO - Fetching reviews for movie_id: tt21903842
+2024-10-28 11:17:45,459 - INFO - Accessed URL: https://www.imdb.com/title/tt21903842/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-28 11:17:45,493 - INFO - Total reviews found: 0
+2024-10-28 11:17:45,493 - INFO - No reviews found for Movie ID tt21903842
+2024-10-28 11:58:19,741 - INFO - Fetching reviews for movie_id: tt21903842
+2024-10-28 11:58:23,090 - INFO - Accessed URL: https://www.imdb.com/title/tt21903842/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-28 11:58:23,124 - INFO - Total reviews found: 0
+2024-10-28 11:58:23,124 - INFO - No reviews found for Movie ID tt21903842
+2024-10-28 12:34:52,822 - INFO - Fetching reviews for movie_id: tt21903842
+2024-10-28 12:34:55,964 - INFO - Accessed URL: https://www.imdb.com/title/tt21903842/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-28 12:34:55,996 - INFO - Total reviews found: 0
+2024-10-28 12:34:55,996 - INFO - No reviews found for Movie ID tt21903842

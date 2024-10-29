@@ -69,45 +69,64 @@ class MongoDataExtractor:
                         'review_text': review.get('Review'),
                         'rating': review.get('Rating'),
                         'author': review.get('Author'),
-                        'date': review.get('Date'),
+                        'date': review.get('Date') if review.get('Date') != "" else None,  
                         'helpful': review.get('Helpful'),
                         'not_helpful': review.get('Not Helpful')
                     })
 
-            return {'review': pd.DataFrame(reviews_data)}  # Return DataFrame of reviews
+            reviews_df = pd.DataFrame(reviews_data)    
+            reviews_df['rating'] = reviews_df['rating'].replace('No rating', None)
+            reviews_df['rating'] = pd.to_numeric(reviews_df['rating'], errors='coerce')
+            reviews_df = reviews_df.replace({np.nan: None})
+            reviews_df.drop_duplicates(inplace=True)
+
+            return {'review': reviews_df}
 
         # Define transformations for each collection
         transformations = {
-            'movie_genres': lambda df: {'genre': df.drop(columns=['_id']).rename(columns={'id': 'genre_id'})} 
-                                        if not self.check_and_mark_processed('movie_genres') else None,
+            'movie_genres': lambda df: {
+                'genre': df.drop(columns=['_id']).rename(columns={'id': 'genre_id'}).drop_duplicates()
+            } if not self.check_and_mark_processed('movie_genres') else None,
+            
             'movie_details': lambda df: {
                 'movie': df[['id', 'title', 'budget', 'homepage', 'overview', 'popularity', 
                             'release_date', 'revenue', 'runtime', 'status', 'tagline', 
-                            'vote_average', 'vote_count']].rename(columns={'id': 'movie_id'}).drop_duplicates(),
+                            'vote_average', 'vote_count']].rename(columns={'id': 'movie_id'})  
+                            .replace({np.nan: None, '': None})
+                            .drop_duplicates(),
                 'movie_genre': pd.DataFrame([(row['id'], g['id']) for _, row in df.iterrows() for g in row['genres']], 
-                                            columns=['movie_id', 'genre_id'])
+                                            columns=['movie_id', 'genre_id']).drop_duplicates()
             },
+            
             'movie_actor_credits': lambda df: {
-                'movie_cast': df[['id', 'character', 'order', 'movie_tmdb_id']].rename(columns={'id': 'actor_id', 'order': 'order_num', 'movie_tmdb_id': 'movie_id'}).drop_duplicates()
+                'movie_cast': df[['id', 'character', 'order', 'movie_tmdb_id']]
+                            .rename(columns={'id': 'actor_id', 'order': 'order_num', 'movie_tmdb_id': 'movie_id'})
+                            .replace({np.nan: None, '': None}) 
+                            .drop_duplicates()
             },
+            
             'movie_director_credits': lambda df: {
-                'movie_direction': df[['id', 'known_for_department', 'movie_tmdb_id']].rename(columns={'id': 'director_id', 'movie_tmdb_id': 'movie_id'}).drop_duplicates()
+                'movie_direction': df[['id', 'known_for_department', 'movie_tmdb_id']]
+                            .rename(columns={'id': 'director_id', 'movie_tmdb_id': 'movie_id'})
+                            .replace({np.nan: None, '': None}) 
+                            .drop_duplicates()
             },
+            
             'actor_details': lambda df: {
                 'actor': df[['id', 'name', 'gender', 'birthday', 'deathday', 'popularity', 'place_of_birth']]
-                .rename(columns={'id': 'actor_id'})
-                .replace({'gender': {0: 'Not set / not specified', 1: 'Female', 2: 'Male', 3: 'Non-binary'}})
-                .replace({np.nan: None})
-                .drop_duplicates()
+                            .rename(columns={'id': 'actor_id'})
+                            .replace({'gender': {0: 'Not set / not specified', 1: 'Female', 2: 'Male', 3: 'Non-binary'}})  
+                            .drop_duplicates()
             },
+            
             'director_details': lambda df: {
                 'director': df[['id', 'name', 'gender', 'birthday', 'deathday', 'popularity', 'place_of_birth']]
-                .rename(columns={'id': 'director_id'})
-                .replace({'gender': {0: 'Not set / not specified', 1: 'Female', 2: 'Male', 3: 'Non-binary'}})
-                .replace({np.nan: None})
-                .drop_duplicates()
+                            .rename(columns={'id': 'director_id'})
+                            .replace({'gender': {0: 'Not set / not specified', 1: 'Female', 2: 'Male', 3: 'Non-binary'}})
+                            .drop_duplicates()
             },  
-            'movie_reviews': lambda df: transform_movie_reviews(df, movie_details_df) 
+            
+            'movie_reviews': lambda df: transform_movie_reviews(df, movie_details_df)
         }
 
         transformed_data = {}
@@ -122,11 +141,10 @@ class MongoDataExtractor:
                 if collection_data is not None:
                     transformed_data.update(collection_data)
 
+                if collection not in ['movie_genres', 'processing_flags']:
+                    self.db[collection].delete_many({})
+
         # Check and mark processed for movie_genres at the end of processing
         self.check_and_mark_processed('movie_genres')
 
         return transformed_data
-
-# Instantiate the extractor and process the data
-# extractor = MongoDataExtractor()
-# transformed_data = extractor.process_all_collections()

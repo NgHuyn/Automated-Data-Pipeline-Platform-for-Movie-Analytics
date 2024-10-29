@@ -22,3 +22,111 @@
 2024-10-26 23:30:44,461 - INFO - Clicked 'More' button successfully.
 2024-10-26 23:31:04,702 - INFO - Processed 50 reviews for Movie ID: tt28075881.
 2024-10-26 23:31:04,703 - INFO - Movie tt28075881 has 50/50 reviews
+2024-10-27 18:59:58,218 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 19:00:01,354 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:00:01,582 - INFO - Total reviews found: 60
+2024-10-27 19:00:01,582 - INFO - 60 new reviews found for Movie ID tt28075881
+2024-10-27 19:00:05,646 - INFO - Clicked 'All' button successfully.
+2024-10-27 19:00:05,654 - INFO - Starting to scroll to load all reviews.
+2024-10-27 19:00:07,669 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 19:00:28,030 - INFO - Processed 60 reviews for Movie ID: tt28075881.
+2024-10-27 19:00:28,030 - INFO - Movie tt28075881 has 60/60 reviews
+2024-10-27 19:18:55,239 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 19:18:58,671 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:18:58,701 - INFO - Total reviews found: 60
+2024-10-27 19:18:58,701 - INFO - 60 new reviews found for Movie ID tt28075881
+2024-10-27 19:19:02,801 - INFO - Clicked 'All' button successfully.
+2024-10-27 19:19:02,810 - INFO - Starting to scroll to load all reviews.
+2024-10-27 19:19:04,832 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 19:19:25,164 - INFO - Processed 60 reviews for Movie ID: tt28075881.
+2024-10-27 19:19:25,165 - INFO - Movie tt28075881 has 60/60 reviews
+2024-10-27 19:26:16,033 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 19:26:19,656 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:26:19,689 - INFO - Total reviews found: 60
+2024-10-27 19:26:19,689 - INFO - 60 new reviews found for Movie ID tt28075881
+2024-10-27 19:26:23,741 - INFO - Clicked 'All' button successfully.
+2024-10-27 19:26:23,747 - INFO - Starting to scroll to load all reviews.
+2024-10-27 19:26:25,759 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 19:26:46,064 - INFO - Processed 60 reviews for Movie ID: tt28075881.
+2024-10-27 19:26:46,064 - INFO - Movie tt28075881 has 60/60 reviews
+2024-10-27 19:37:46,979 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 19:37:50,585 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:37:50,615 - INFO - Total reviews found: 60
+2024-10-27 19:37:50,615 - INFO - 60 new reviews found for Movie ID tt28075881
+2024-10-27 19:37:54,673 - INFO - Clicked 'All' button successfully.
+2024-10-27 19:37:54,678 - INFO - Starting to scroll to load all reviews.
+2024-10-27 19:37:56,690 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 19:38:17,141 - INFO - Processed 60 reviews for Movie ID: tt28075881.
+2024-10-27 19:38:17,142 - INFO - Movie tt28075881 has 60/60 reviews
+2024-10-27 20:15:54,698 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 20:15:58,488 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:15:58,525 - INFO - Total reviews found: 61
+2024-10-27 20:15:58,526 - INFO - 61 new reviews found for Movie ID tt28075881
+2024-10-27 20:16:02,584 - INFO - Clicked 'All' button successfully.
+2024-10-27 20:16:02,591 - INFO - Starting to scroll to load all reviews.
+2024-10-27 20:16:04,604 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 20:16:24,925 - INFO - Processed 61 reviews for Movie ID: tt28075881.
+2024-10-27 20:16:24,926 - INFO - Movie tt28075881 has 61/61 reviews
+2024-10-27 20:28:34,242 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 20:28:38,359 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:28:38,393 - INFO - Total reviews found: 61
+2024-10-27 20:28:38,395 - INFO - 61 new reviews found for Movie ID tt28075881
+2024-10-27 20:28:42,512 - INFO - Clicked 'All' button successfully.
+2024-10-27 20:28:42,521 - INFO - Starting to scroll to load all reviews.
+2024-10-27 20:28:44,533 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 20:29:04,940 - INFO - Processed 61 reviews for Movie ID: tt28075881.
+2024-10-27 20:29:04,941 - INFO - Movie tt28075881 has 61/61 reviews
+2024-10-27 20:38:04,717 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 20:38:08,516 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:38:08,549 - INFO - Total reviews found: 61
+2024-10-27 20:38:08,549 - INFO - 61 new reviews found for Movie ID tt28075881
+2024-10-27 20:38:12,611 - INFO - Clicked 'All' button successfully.
+2024-10-27 20:38:12,620 - INFO - Starting to scroll to load all reviews.
+2024-10-27 20:38:14,634 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 20:38:34,974 - INFO - Processed 61 reviews for Movie ID: tt28075881.
+2024-10-27 20:38:34,974 - INFO - Movie tt28075881 has 61/61 reviews
+2024-10-27 20:56:41,732 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 20:56:45,219 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:56:45,298 - INFO - Total reviews found: 63
+2024-10-27 20:56:45,299 - INFO - 63 new reviews found for Movie ID tt28075881
+2024-10-27 20:56:49,349 - INFO - Clicked 'All' button successfully.
+2024-10-27 20:56:49,360 - INFO - Starting to scroll to load all reviews.
+2024-10-27 20:56:51,376 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 20:57:11,652 - INFO - Processed 63 reviews for Movie ID: tt28075881.
+2024-10-27 20:57:11,653 - INFO - Movie tt28075881 has 63/63 reviews
+2024-10-27 21:27:13,716 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 21:27:17,719 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 21:27:17,759 - INFO - Total reviews found: 64
+2024-10-27 21:27:17,759 - INFO - 64 new reviews found for Movie ID tt28075881
+2024-10-27 21:27:21,817 - INFO - Clicked 'All' button successfully.
+2024-10-27 21:27:21,826 - INFO - Starting to scroll to load all reviews.
+2024-10-27 21:27:23,839 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 21:27:44,142 - INFO - Processed 64 reviews for Movie ID: tt28075881.
+2024-10-27 21:27:44,143 - INFO - Movie tt28075881 has 64/64 reviews
+2024-10-27 22:17:25,632 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 22:17:29,218 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:17:29,291 - INFO - Total reviews found: 64
+2024-10-27 22:17:29,298 - INFO - 64 new reviews found for Movie ID tt28075881
+2024-10-27 22:17:33,346 - INFO - Clicked 'All' button successfully.
+2024-10-27 22:17:33,353 - INFO - Starting to scroll to load all reviews.
+2024-10-27 22:17:35,366 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 22:17:55,740 - INFO - Processed 64 reviews for Movie ID: tt28075881.
+2024-10-27 22:17:55,740 - INFO - Movie tt28075881 has 64/64 reviews
+2024-10-27 22:22:25,476 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-27 22:22:34,093 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:22:34,123 - INFO - Total reviews found: 64
+2024-10-27 22:22:34,123 - INFO - 64 new reviews found for Movie ID tt28075881
+2024-10-27 22:22:38,240 - INFO - Clicked 'All' button successfully.
+2024-10-27 22:22:38,248 - INFO - Starting to scroll to load all reviews.
+2024-10-27 22:22:40,262 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 22:23:00,818 - INFO - Processed 64 reviews for Movie ID: tt28075881.
+2024-10-27 22:23:00,819 - INFO - Movie tt28075881 has 64/64 reviews
+2024-10-29 18:08:45,163 - INFO - Fetching reviews for movie_id: tt28075881
+2024-10-29 18:08:49,156 - INFO - Accessed URL: https://www.imdb.com/title/tt28075881/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:08:49,251 - INFO - Total reviews found: 103
+2024-10-29 18:08:49,255 - INFO - 103 new reviews found for Movie ID tt28075881
+2024-10-29 18:08:53,307 - INFO - Clicked 'All' button successfully.
+2024-10-29 18:08:53,313 - INFO - Starting to scroll to load all reviews.
+2024-10-29 18:08:55,326 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-29 18:09:15,992 - INFO - Processed 103 reviews for Movie ID: tt28075881.
+2024-10-29 18:09:15,992 - INFO - Movie tt28075881 has 103/103 reviews

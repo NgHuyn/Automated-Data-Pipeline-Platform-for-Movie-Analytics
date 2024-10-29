@@ -2,3 +2,7 @@
 2024-10-25 23:35:27,571 - INFO - Accessed URL: https://www.imdb.com/title/tt23743204/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:35:27,605 - INFO - Total reviews found: 0
 2024-10-25 23:35:27,605 - INFO - No reviews found for Movie ID tt23743204
+2024-10-27 22:53:17,193 - INFO - Fetching reviews for movie_id: tt23743204
+2024-10-27 22:53:24,659 - INFO - Accessed URL: https://www.imdb.com/title/tt23743204/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:53:24,693 - INFO - Total reviews found: 0
+2024-10-27 22:53:24,695 - INFO - No reviews found for Movie ID tt23743204

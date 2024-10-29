@@ -2,3 +2,7 @@
 2024-10-25 23:35:41,376 - INFO - Accessed URL: https://www.imdb.com/title/tt33984632/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:35:41,410 - INFO - Total reviews found: 0
 2024-10-25 23:35:41,411 - INFO - No reviews found for Movie ID tt33984632
+2024-10-27 22:54:13,341 - INFO - Fetching reviews for movie_id: tt33984632
+2024-10-27 22:54:21,300 - INFO - Accessed URL: https://www.imdb.com/title/tt33984632/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:54:21,329 - INFO - Total reviews found: 0
+2024-10-27 22:54:21,330 - INFO - No reviews found for Movie ID tt33984632

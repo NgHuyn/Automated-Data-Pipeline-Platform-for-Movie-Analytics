@@ -18,10 +18,10 @@ def configure():
 
 # Task to fetch reviews and load movies in a week
 @task(retries=2)
-def extract_and_load_recent_movies(batch_size=10):
-    release_date_from = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+def extract_and_load_recent_movies():
+    release_date_from = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
     release_date_to = datetime.now().strftime('%Y-%m-%d')
-    fetch_and_save_movie_data(release_date_from, release_date_to, batch_size)
+    fetch_and_save_movie_data(release_date_from, release_date_to)
 
 # Task to check the existence of the top popular movies collection
 @task
@@ -33,11 +33,12 @@ def check_top_popular_movies(db):
 
 @task
 def get_top_10_movies():
-    release_date_from = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+    release_date_from = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
     release_date_to = datetime.now().strftime('%Y-%m-%d')
     # current popular movies
     popular_movies = MoviesScraper(release_date_from=release_date_from, release_date_to=release_date_to).fetch_movies(limit=None)
     return popular_movies
+
 @task
 def update_movie_reviews(db):
     popular_movies = get_top_10_movies()

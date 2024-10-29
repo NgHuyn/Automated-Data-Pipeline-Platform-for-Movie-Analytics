@@ -7,3 +7,21 @@
 2024-10-25 23:34:04,216 - INFO - Reached the bottom of the page, all reviews loaded.
 2024-10-25 23:34:24,703 - INFO - Processed 114 reviews for Movie ID: tt31948043.
 2024-10-25 23:34:24,709 - INFO - Movie tt31948043 has 114/114 reviews
+2024-10-27 22:49:44,368 - INFO - Fetching reviews for movie_id: tt31948043
+2024-10-27 22:49:52,246 - INFO - Accessed URL: https://www.imdb.com/title/tt31948043/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:49:52,283 - INFO - Total reviews found: 154
+2024-10-27 22:49:52,284 - INFO - 154 new reviews found for Movie ID tt31948043
+2024-10-27 22:49:56,341 - INFO - Clicked 'All' button successfully.
+2024-10-27 22:49:56,347 - INFO - Starting to scroll to load all reviews.
+2024-10-27 22:49:58,362 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 22:50:19,109 - INFO - Processed 154 reviews for Movie ID: tt31948043.
+2024-10-27 22:50:19,110 - INFO - Movie tt31948043 has 154/154 reviews
+2024-10-29 18:12:37,550 - INFO - Fetching reviews for movie_id: tt31948043
+2024-10-29 18:12:41,327 - INFO - Accessed URL: https://www.imdb.com/title/tt31948043/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:12:41,358 - INFO - Total reviews found: 154
+2024-10-29 18:12:41,359 - INFO - 154 new reviews found for Movie ID tt31948043
+2024-10-29 18:12:45,444 - INFO - Clicked 'All' button successfully.
+2024-10-29 18:12:45,452 - INFO - Starting to scroll to load all reviews.
+2024-10-29 18:12:47,469 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-29 18:13:08,154 - INFO - Processed 154 reviews for Movie ID: tt31948043.
+2024-10-29 18:13:08,154 - INFO - Movie tt31948043 has 154/154 reviews

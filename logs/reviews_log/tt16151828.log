@@ -2,3 +2,11 @@
 2024-10-25 23:34:41,068 - INFO - Accessed URL: https://www.imdb.com/title/tt16151828/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:34:41,137 - INFO - Total reviews found: 0
 2024-10-25 23:34:41,142 - INFO - No reviews found for Movie ID tt16151828
+2024-10-27 22:50:45,046 - INFO - Fetching reviews for movie_id: tt16151828
+2024-10-27 22:50:52,762 - INFO - Accessed URL: https://www.imdb.com/title/tt16151828/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:50:52,793 - INFO - Total reviews found: 0
+2024-10-27 22:50:52,795 - INFO - No reviews found for Movie ID tt16151828
+2024-10-29 18:17:24,423 - INFO - Fetching reviews for movie_id: tt16151828
+2024-10-29 18:17:27,756 - INFO - Accessed URL: https://www.imdb.com/title/tt16151828/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:17:27,785 - INFO - Total reviews found: 0
+2024-10-29 18:17:27,786 - INFO - No reviews found for Movie ID tt16151828

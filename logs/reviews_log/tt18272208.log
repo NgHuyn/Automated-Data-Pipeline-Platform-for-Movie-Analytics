@@ -18,3 +18,75 @@
 2024-10-26 23:30:03,606 - INFO - 1 new reviews found for Movie ID tt18272208
 2024-10-26 23:30:23,685 - INFO - Processed 1 reviews for Movie ID: tt18272208.
 2024-10-26 23:30:23,685 - INFO - Movie tt18272208 has 1/1 reviews
+2024-10-27 18:57:16,492 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 18:57:20,970 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 18:57:20,998 - INFO - Total reviews found: 2
+2024-10-27 18:57:20,998 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 18:57:41,082 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 18:57:41,083 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 19:16:35,494 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 19:16:38,515 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:16:38,543 - INFO - Total reviews found: 2
+2024-10-27 19:16:38,543 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 19:16:58,629 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 19:16:58,630 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 19:24:02,657 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 19:24:05,647 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:24:05,679 - INFO - Total reviews found: 2
+2024-10-27 19:24:05,680 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 19:24:25,760 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 19:24:25,761 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 19:35:29,616 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 19:35:33,489 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:35:33,524 - INFO - Total reviews found: 2
+2024-10-27 19:35:33,524 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 19:35:53,673 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 19:35:53,673 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 20:13:32,768 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 20:13:36,224 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:13:36,255 - INFO - Total reviews found: 2
+2024-10-27 20:13:36,255 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 20:13:56,436 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 20:13:56,437 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 20:26:16,178 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 20:26:20,301 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:26:20,327 - INFO - Total reviews found: 2
+2024-10-27 20:26:20,327 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 20:26:40,522 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 20:26:40,523 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 20:35:49,330 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 20:35:52,658 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:35:52,690 - INFO - Total reviews found: 2
+2024-10-27 20:35:52,691 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 20:36:12,866 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 20:36:12,866 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 20:54:22,349 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 20:54:25,452 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:54:25,480 - INFO - Total reviews found: 2
+2024-10-27 20:54:25,481 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 20:54:45,698 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 20:54:45,699 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 21:24:55,923 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 21:24:59,295 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 21:24:59,323 - INFO - Total reviews found: 2
+2024-10-27 21:24:59,324 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 21:25:19,484 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 21:25:19,484 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 22:15:07,493 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 22:15:10,851 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:15:10,886 - INFO - Total reviews found: 2
+2024-10-27 22:15:10,887 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 22:15:30,974 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 22:15:30,975 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-27 22:20:25,104 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-27 22:20:32,588 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:20:32,615 - INFO - Total reviews found: 2
+2024-10-27 22:20:32,615 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-27 22:20:52,711 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-27 22:20:52,712 - INFO - Movie tt18272208 has 2/2 reviews
+2024-10-29 18:08:04,823 - INFO - Fetching reviews for movie_id: tt18272208
+2024-10-29 18:08:07,929 - INFO - Accessed URL: https://www.imdb.com/title/tt18272208/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:08:07,966 - INFO - Total reviews found: 2
+2024-10-29 18:08:07,966 - INFO - 2 new reviews found for Movie ID tt18272208
+2024-10-29 18:08:28,081 - INFO - Processed 2 reviews for Movie ID: tt18272208.
+2024-10-29 18:08:28,082 - INFO - Movie tt18272208 has 2/2 reviews

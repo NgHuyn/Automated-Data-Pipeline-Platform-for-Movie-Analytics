@@ -2,3 +2,11 @@
 2024-10-25 23:36:52,726 - INFO - Accessed URL: https://www.imdb.com/title/tt32043354/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:36:52,800 - INFO - Total reviews found: 0
 2024-10-25 23:36:52,800 - INFO - No reviews found for Movie ID tt32043354
+2024-10-27 22:59:42,607 - INFO - Fetching reviews for movie_id: tt32043354
+2024-10-27 22:59:50,537 - INFO - Accessed URL: https://www.imdb.com/title/tt32043354/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:59:50,577 - INFO - Total reviews found: 0
+2024-10-27 22:59:50,578 - INFO - No reviews found for Movie ID tt32043354
+2024-10-29 18:15:45,687 - INFO - Fetching reviews for movie_id: tt32043354
+2024-10-29 18:15:49,074 - INFO - Accessed URL: https://www.imdb.com/title/tt32043354/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:15:49,104 - INFO - Total reviews found: 0
+2024-10-29 18:15:49,104 - INFO - No reviews found for Movie ID tt32043354

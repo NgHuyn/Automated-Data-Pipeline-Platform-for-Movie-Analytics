@@ -10,3 +10,13 @@
 2024-10-26 23:31:49,557 - INFO - Accessed URL: https://www.imdb.com/title/tt33246678/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-26 23:31:49,656 - INFO - Total reviews found: 0
 2024-10-26 23:31:49,660 - INFO - No reviews found for Movie ID tt33246678
+2024-10-27 22:26:26,064 - INFO - Fetching reviews for movie_id: tt33246678
+2024-10-27 22:26:32,246 - INFO - Accessed URL: https://www.imdb.com/title/tt33246678/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:26:32,372 - INFO - Total reviews found: 0
+2024-10-27 22:26:32,373 - INFO - No reviews found for Movie ID tt33246678
+2024-10-29 18:12:04,005 - INFO - Fetching reviews for movie_id: tt33246678
+2024-10-29 18:12:07,421 - INFO - Accessed URL: https://www.imdb.com/title/tt33246678/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:12:07,448 - INFO - Total reviews found: 2
+2024-10-29 18:12:07,448 - INFO - 2 new reviews found for Movie ID tt33246678
+2024-10-29 18:12:27,537 - INFO - Processed 2 reviews for Movie ID: tt33246678.
+2024-10-29 18:12:27,538 - INFO - Movie tt33246678 has 2/2 reviews

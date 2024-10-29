@@ -2,3 +2,15 @@
 2024-10-25 23:28:53,402 - INFO - Accessed URL: https://www.imdb.com/title/tt33529930/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:28:53,475 - INFO - Total reviews found: 0
 2024-10-25 23:28:53,476 - INFO - No reviews found for Movie ID tt33529930
+2024-10-27 22:31:49,078 - INFO - Fetching reviews for movie_id: tt33529930
+2024-10-27 22:31:56,790 - INFO - Accessed URL: https://www.imdb.com/title/tt33529930/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:31:56,825 - INFO - Total reviews found: 1
+2024-10-27 22:31:56,825 - INFO - 1 new reviews found for Movie ID tt33529930
+2024-10-27 22:32:16,915 - INFO - Processed 1 reviews for Movie ID: tt33529930.
+2024-10-27 22:32:16,915 - INFO - Movie tt33529930 has 1/1 reviews
+2024-10-29 18:10:37,024 - INFO - Fetching reviews for movie_id: tt33529930
+2024-10-29 18:10:40,267 - INFO - Accessed URL: https://www.imdb.com/title/tt33529930/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:10:40,296 - INFO - Total reviews found: 2
+2024-10-29 18:10:40,297 - INFO - 2 new reviews found for Movie ID tt33529930
+2024-10-29 18:11:00,485 - INFO - Processed 2 reviews for Movie ID: tt33529930.
+2024-10-29 18:11:00,485 - INFO - Movie tt33529930 has 2/2 reviews

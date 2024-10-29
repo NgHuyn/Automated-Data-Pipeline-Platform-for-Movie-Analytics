@@ -2,3 +2,11 @@
 2024-10-25 23:33:06,334 - INFO - Accessed URL: https://www.imdb.com/title/tt33381781/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:33:06,358 - INFO - Total reviews found: 0
 2024-10-25 23:33:06,366 - INFO - No reviews found for Movie ID tt33381781
+2024-10-27 22:46:58,939 - INFO - Fetching reviews for movie_id: tt33381781
+2024-10-27 22:47:06,692 - INFO - Accessed URL: https://www.imdb.com/title/tt33381781/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:47:06,724 - INFO - Total reviews found: 0
+2024-10-27 22:47:06,725 - INFO - No reviews found for Movie ID tt33381781
+2024-10-29 18:19:36,655 - INFO - Fetching reviews for movie_id: tt33381781
+2024-10-29 18:19:39,817 - INFO - Accessed URL: https://www.imdb.com/title/tt33381781/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:19:39,846 - INFO - Total reviews found: 0
+2024-10-29 18:19:39,846 - INFO - No reviews found for Movie ID tt33381781

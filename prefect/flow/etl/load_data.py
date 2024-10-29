@@ -3,7 +3,6 @@ import pandas as pd
 import os
 from dotenv import load_dotenv
 import logging
-from transform import MongoDataExtractor  
 
 logging.basicConfig(level=logging.INFO)
 
@@ -35,6 +34,14 @@ def create_table_if_not_exists(conn, table_name, create_table_query):
     finally:
         cursor.close()
 
+def is_table_empty(conn, table_name):
+    """Check if a table is empty."""
+    cursor = conn.cursor()
+    cursor.execute(f"SELECT EXISTS (SELECT 1 FROM {table_name} LIMIT 1);")
+    result = cursor.fetchone()[0]
+    cursor.close()
+    return not result  # Return True if table is empty
+
 def load_data_to_postgres(data: pd.DataFrame, table_name: str):
     """Load data into PostgreSQL table."""
     conn = create_connection()
@@ -45,7 +52,7 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
     table_queries = {
         'genre': """
         CREATE TABLE IF NOT EXISTS genre (
-            genre_id INTERGER PRIMARY KEY,
+            genre_id INTEGER PRIMARY KEY,
             name VARCHAR(20)
         );""",
         'movie': """
@@ -110,11 +117,11 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
             movie_id INTEGER,
             review_summary TEXT,
             review_text TEXT,
-            rating SMALLINT,
+            rating FLOAT,
             author VARCHAR(50),
             date DATE,
-            helpful INTEGER,
-            not_helpful INTEGER,
+            helpful FLOAT,
+            not_helpful FLOAT,
             FOREIGN KEY (movie_id) REFERENCES movie(movie_id)
         );"""
     }
@@ -123,8 +130,29 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
     if table_name in table_queries:
         create_table_if_not_exists(conn, table_name, table_queries[table_name])
 
+    # Check if table is empty for 'genre' table
+    if table_name == 'genre' and not is_table_empty(conn, table_name):
+        logging.info(f"Table {table_name} already has data. Skipping data load.")
+        conn.close()
+        return  # Exit function early if data exists
+
     cursor = conn.cursor()
     
+    # check if actor and director already exists
+    if table_name == 'actor':
+        existing_actors_query = "SELECT actor_id FROM actor WHERE actor_id = ANY(%s)"
+        existing_ids = data['actor_id'].tolist()
+    elif table_name == 'director':
+        existing_directors_query = "SELECT director_id FROM director WHERE director_id = ANY(%s)"
+        existing_ids = data['director_id'].tolist()
+    else:
+        existing_ids = []
+
+    if existing_ids:
+        cursor.execute(existing_actors_query if table_name == 'actor' else existing_directors_query, (existing_ids,))
+        existing_ids_in_db = set(row[0] for row in cursor.fetchall())
+        data = data[~data['actor_id'].isin(existing_ids_in_db)] if table_name == 'actor' else data[~data['director_id'].isin(existing_ids_in_db)]
+
     # Insert statement
     insert_query = f"""
     INSERT INTO {table_name} ({', '.join(data.columns)}) 
@@ -132,11 +160,13 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
     """
 
     try:
-        # Using executemany for better performance
-        cursor.executemany(insert_query, data.values.tolist())  
-        
-        conn.commit()  # Commit the changes
-        logging.info(f"Data loaded successfully into {table_name}.")
+        if not data.empty:
+            # Using executemany for better performance
+            cursor.executemany(insert_query, data.values.tolist())  
+            conn.commit()  # Commit the changes
+            logging.info(f"Data loaded successfully into {table_name}.")
+        else:
+            logging.info(f"No new data to load into {table_name}.")
 
     except Exception as e:
         logging.error(f"Error loading data into {table_name}: {e}")
@@ -145,27 +175,3 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
     finally:
         cursor.close()
         conn.close()
-
-if __name__ == "__main__":
-    load_dotenv()  # Load environment variables
-
-    extractor = MongoDataExtractor()
-    transformed_data = extractor.process_all_collections()
-
-    # Load each table into PostgreSQL
-    if 'genre' in transformed_data:
-        load_data_to_postgres(transformed_data['genre'], 'genre')
-    if 'movie' in transformed_data:
-        load_data_to_postgres(transformed_data['movie'], 'movie')
-    if 'movie_genre' in transformed_data:
-        load_data_to_postgres(transformed_data['movie_genre'], 'movie_genre')
-    if 'movie_cast' in transformed_data:
-        load_data_to_postgres(transformed_data['movie_cast'], 'movie_cast')
-    if 'movie_direction' in transformed_data:
-        load_data_to_postgres(transformed_data['movie_direction'], 'movie_direction')
-    if 'actor' in transformed_data:
-        load_data_to_postgres(transformed_data['actor'], 'actor')
-    if 'director' in transformed_data:
-        load_data_to_postgres(transformed_data['director'], 'director')
-    if 'review' in transformed_data:
-        load_data_to_postgres(transformed_data['review'], 'review')

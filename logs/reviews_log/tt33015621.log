@@ -2,3 +2,13 @@
 2024-10-25 23:31:00,847 - INFO - Accessed URL: https://www.imdb.com/title/tt33015621/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:31:00,886 - INFO - Total reviews found: 0
 2024-10-25 23:31:00,887 - INFO - No reviews found for Movie ID tt33015621
+2024-10-27 22:36:36,086 - INFO - Fetching reviews for movie_id: tt33015621
+2024-10-27 22:36:43,428 - INFO - Accessed URL: https://www.imdb.com/title/tt33015621/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:36:43,460 - INFO - Total reviews found: 0
+2024-10-27 22:36:43,461 - INFO - No reviews found for Movie ID tt33015621
+2024-10-29 18:17:59,294 - INFO - Fetching reviews for movie_id: tt33015621
+2024-10-29 18:18:02,839 - INFO - Accessed URL: https://www.imdb.com/title/tt33015621/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:18:02,867 - INFO - Total reviews found: 2
+2024-10-29 18:18:02,868 - INFO - 2 new reviews found for Movie ID tt33015621
+2024-10-29 18:18:23,069 - INFO - Processed 2 reviews for Movie ID: tt33015621.
+2024-10-29 18:18:23,070 - INFO - Movie tt33015621 has 2/2 reviews

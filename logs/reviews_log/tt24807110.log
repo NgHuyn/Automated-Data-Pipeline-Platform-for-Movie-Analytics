@@ -8,3 +8,156 @@
 2024-10-25 23:23:56,578 - INFO - Total reviews found: 7
 2024-10-25 23:24:16,730 - INFO - Processed 7 reviews for Movie ID: tt24807110.
 2024-10-25 23:24:16,730 - INFO - Movie tt24807110 has 7/7 reviews
+2024-10-27 18:58:33,399 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 18:58:38,648 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 18:58:38,676 - INFO - Total reviews found: 55
+2024-10-27 18:58:38,676 - INFO - 55 new reviews found for Movie ID tt24807110
+2024-10-27 18:58:42,734 - INFO - Clicked 'All' button successfully.
+2024-10-27 18:58:42,750 - INFO - Starting to scroll to load all reviews.
+2024-10-27 18:58:44,775 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 18:59:05,096 - INFO - Processed 55 reviews for Movie ID: tt24807110.
+2024-10-27 18:59:05,097 - INFO - Movie tt24807110 has 55/55 reviews
+2024-10-27 19:17:38,628 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 19:17:42,826 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:17:42,858 - INFO - Total reviews found: 55
+2024-10-27 19:17:42,858 - INFO - 55 new reviews found for Movie ID tt24807110
+2024-10-27 19:17:46,909 - INFO - Clicked 'All' button successfully.
+2024-10-27 19:17:46,925 - INFO - Starting to scroll to load all reviews.
+2024-10-27 19:17:48,944 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 19:18:09,269 - INFO - Processed 55 reviews for Movie ID: tt24807110.
+2024-10-27 19:18:09,270 - INFO - Movie tt24807110 has 55/55 reviews
+2024-10-27 19:25:02,952 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 19:25:06,479 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:25:06,513 - INFO - Total reviews found: 55
+2024-10-27 19:25:06,514 - INFO - 55 new reviews found for Movie ID tt24807110
+2024-10-27 19:25:10,569 - INFO - Clicked 'All' button successfully.
+2024-10-27 19:25:10,574 - INFO - Starting to scroll to load all reviews.
+2024-10-27 19:25:12,582 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 19:25:32,900 - INFO - Processed 55 reviews for Movie ID: tt24807110.
+2024-10-27 19:25:32,900 - INFO - Movie tt24807110 has 55/55 reviews
+2024-10-27 19:36:33,077 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 19:36:36,589 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 19:36:36,623 - INFO - Total reviews found: 55
+2024-10-27 19:36:36,624 - INFO - 55 new reviews found for Movie ID tt24807110
+2024-10-27 19:36:40,667 - INFO - Clicked 'All' button successfully.
+2024-10-27 19:36:40,673 - INFO - Starting to scroll to load all reviews.
+2024-10-27 19:36:42,684 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 19:37:03,001 - INFO - Processed 55 reviews for Movie ID: tt24807110.
+2024-10-27 19:37:03,001 - INFO - Movie tt24807110 has 55/55 reviews
+2024-10-27 20:14:38,320 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 20:14:43,003 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:14:43,038 - INFO - Total reviews found: 56
+2024-10-27 20:14:43,039 - INFO - 56 new reviews found for Movie ID tt24807110
+2024-10-27 20:14:47,090 - INFO - Clicked 'All' button successfully.
+2024-10-27 20:14:47,099 - INFO - Starting to scroll to load all reviews.
+2024-10-27 20:14:49,114 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 20:15:09,431 - INFO - Processed 56 reviews for Movie ID: tt24807110.
+2024-10-27 20:15:09,432 - INFO - Movie tt24807110 has 56/56 reviews
+2024-10-27 20:27:19,021 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 20:27:22,635 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:27:22,671 - INFO - Total reviews found: 56
+2024-10-27 20:27:22,673 - INFO - 56 new reviews found for Movie ID tt24807110
+2024-10-27 20:27:26,729 - INFO - Clicked 'All' button successfully.
+2024-10-27 20:27:26,736 - INFO - Starting to scroll to load all reviews.
+2024-10-27 20:27:28,749 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 20:27:49,082 - INFO - Processed 56 reviews for Movie ID: tt24807110.
+2024-10-27 20:27:49,082 - INFO - Movie tt24807110 has 56/56 reviews
+2024-10-27 20:36:51,059 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 20:36:54,636 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:36:54,667 - INFO - Total reviews found: 56
+2024-10-27 20:36:54,668 - INFO - 56 new reviews found for Movie ID tt24807110
+2024-10-27 20:36:58,723 - INFO - Clicked 'All' button successfully.
+2024-10-27 20:36:58,728 - INFO - Starting to scroll to load all reviews.
+2024-10-27 20:37:00,738 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 20:37:21,117 - INFO - Processed 56 reviews for Movie ID: tt24807110.
+2024-10-27 20:37:21,118 - INFO - Movie tt24807110 has 56/56 reviews
+2024-10-27 20:55:27,739 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 20:55:31,172 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 20:55:31,202 - INFO - Total reviews found: 57
+2024-10-27 20:55:31,202 - INFO - 57 new reviews found for Movie ID tt24807110
+2024-10-27 20:55:35,245 - INFO - Clicked 'All' button successfully.
+2024-10-27 20:55:35,255 - INFO - Starting to scroll to load all reviews.
+2024-10-27 20:55:37,269 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 20:55:57,550 - INFO - Processed 57 reviews for Movie ID: tt24807110.
+2024-10-27 20:55:57,551 - INFO - Movie tt24807110 has 57/57 reviews
+2024-10-27 21:25:59,541 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 21:26:03,246 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 21:26:03,274 - INFO - Total reviews found: 57
+2024-10-27 21:26:03,275 - INFO - 57 new reviews found for Movie ID tt24807110
+2024-10-27 21:26:07,328 - INFO - Clicked 'All' button successfully.
+2024-10-27 21:26:07,338 - INFO - Starting to scroll to load all reviews.
+2024-10-27 21:26:09,360 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 21:26:29,623 - INFO - Processed 57 reviews for Movie ID: tt24807110.
+2024-10-27 21:26:29,624 - INFO - Movie tt24807110 has 57/57 reviews
+2024-10-27 22:16:11,084 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 22:16:14,642 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:16:14,665 - INFO - Total reviews found: 58
+2024-10-27 22:16:14,665 - INFO - 58 new reviews found for Movie ID tt24807110
+2024-10-27 22:16:18,732 - INFO - Clicked 'All' button successfully.
+2024-10-27 22:16:18,739 - INFO - Starting to scroll to load all reviews.
+2024-10-27 22:16:20,753 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 22:16:41,128 - INFO - Processed 58 reviews for Movie ID: tt24807110.
+2024-10-27 22:16:41,128 - INFO - Movie tt24807110 has 58/58 reviews
+2024-10-27 22:21:16,870 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-27 22:21:23,837 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:21:24,032 - INFO - Total reviews found: 58
+2024-10-27 22:21:24,032 - INFO - 58 new reviews found for Movie ID tt24807110
+2024-10-27 22:21:28,087 - INFO - Clicked 'All' button successfully.
+2024-10-27 22:21:28,096 - INFO - Starting to scroll to load all reviews.
+2024-10-27 22:21:30,109 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-27 22:21:50,481 - INFO - Processed 58 reviews for Movie ID: tt24807110.
+2024-10-27 22:21:50,481 - INFO - Movie tt24807110 has 58/58 reviews
+2024-10-29 14:36:08,906 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-29 14:36:12,514 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 14:36:12,543 - INFO - Total reviews found: 89
+2024-10-29 14:36:12,544 - INFO - 89 new reviews found for Movie ID tt24807110
+2024-10-29 14:36:16,583 - INFO - Clicked 'All' button successfully.
+2024-10-29 14:36:16,594 - INFO - Starting to scroll to load all reviews.
+2024-10-29 14:36:18,616 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-29 14:36:39,020 - INFO - Processed 89 reviews for Movie ID: tt24807110.
+2024-10-29 14:36:39,021 - INFO - Movie tt24807110 has 89/89 reviews
+2024-10-29 15:03:49,452 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-29 15:03:52,911 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 15:03:52,939 - INFO - Total reviews found: 89
+2024-10-29 15:03:52,939 - INFO - 89 new reviews found for Movie ID tt24807110
+2024-10-29 15:03:56,993 - INFO - Clicked 'All' button successfully.
+2024-10-29 15:03:57,002 - INFO - Starting to scroll to load all reviews.
+2024-10-29 15:03:59,014 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-29 15:04:19,451 - INFO - Processed 89 reviews for Movie ID: tt24807110.
+2024-10-29 15:04:19,451 - INFO - Movie tt24807110 has 89/89 reviews
+2024-10-29 15:42:37,273 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-29 15:42:41,364 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 15:42:41,406 - INFO - Total reviews found: 89
+2024-10-29 15:42:41,406 - INFO - 89 new reviews found for Movie ID tt24807110
+2024-10-29 15:42:45,483 - INFO - Clicked 'All' button successfully.
+2024-10-29 15:42:45,492 - INFO - Starting to scroll to load all reviews.
+2024-10-29 15:42:47,508 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-29 15:43:07,926 - INFO - Processed 89 reviews for Movie ID: tt24807110.
+2024-10-29 15:43:07,927 - INFO - Movie tt24807110 has 89/89 reviews
+2024-10-29 16:24:00,128 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-29 16:24:04,535 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 16:24:04,572 - INFO - Total reviews found: 89
+2024-10-29 16:24:04,573 - INFO - 89 new reviews found for Movie ID tt24807110
+2024-10-29 16:24:08,665 - INFO - Clicked 'All' button successfully.
+2024-10-29 16:24:08,671 - INFO - Starting to scroll to load all reviews.
+2024-10-29 16:24:10,679 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-29 16:24:31,077 - INFO - Processed 89 reviews for Movie ID: tt24807110.
+2024-10-29 16:24:31,078 - INFO - Movie tt24807110 has 89/89 reviews
+2024-10-29 16:32:59,240 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-29 16:33:03,279 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 16:33:03,315 - INFO - Total reviews found: 89
+2024-10-29 16:33:03,315 - INFO - 89 new reviews found for Movie ID tt24807110
+2024-10-29 16:33:07,375 - INFO - Clicked 'All' button successfully.
+2024-10-29 16:33:07,381 - INFO - Starting to scroll to load all reviews.
+2024-10-29 16:33:09,392 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-29 16:33:29,812 - INFO - Processed 89 reviews for Movie ID: tt24807110.
+2024-10-29 16:33:29,813 - INFO - Movie tt24807110 has 89/89 reviews
+2024-10-29 18:01:26,560 - INFO - Fetching reviews for movie_id: tt24807110
+2024-10-29 18:01:30,428 - INFO - Accessed URL: https://www.imdb.com/title/tt24807110/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:01:30,466 - INFO - Total reviews found: 89
+2024-10-29 18:01:30,466 - INFO - 89 new reviews found for Movie ID tt24807110
+2024-10-29 18:01:34,517 - INFO - Clicked 'All' button successfully.
+2024-10-29 18:01:34,531 - INFO - Starting to scroll to load all reviews.
+2024-10-29 18:01:36,542 - INFO - Reached the bottom of the page, all reviews loaded.
+2024-10-29 18:01:57,122 - INFO - Processed 89 reviews for Movie ID: tt24807110.
+2024-10-29 18:01:57,123 - INFO - Movie tt24807110 has 89/89 reviews

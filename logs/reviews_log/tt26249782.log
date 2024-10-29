@@ -2,3 +2,11 @@
 2024-10-25 23:29:39,411 - INFO - Accessed URL: https://www.imdb.com/title/tt26249782/reviews/?sort=submission_date%2Cdesc&dir=desc
 2024-10-25 23:29:39,442 - INFO - Total reviews found: 0
 2024-10-25 23:29:39,442 - INFO - No reviews found for Movie ID tt26249782
+2024-10-27 22:34:25,520 - INFO - Fetching reviews for movie_id: tt26249782
+2024-10-27 22:34:33,134 - INFO - Accessed URL: https://www.imdb.com/title/tt26249782/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-27 22:34:33,167 - INFO - Total reviews found: 0
+2024-10-27 22:34:33,168 - INFO - No reviews found for Movie ID tt26249782
+2024-10-29 18:18:50,104 - INFO - Fetching reviews for movie_id: tt26249782
+2024-10-29 18:18:53,308 - INFO - Accessed URL: https://www.imdb.com/title/tt26249782/reviews/?sort=submission_date%2Cdesc&dir=desc
+2024-10-29 18:18:53,340 - INFO - Total reviews found: 0
+2024-10-29 18:18:53,341 - INFO - No reviews found for Movie ID tt26249782

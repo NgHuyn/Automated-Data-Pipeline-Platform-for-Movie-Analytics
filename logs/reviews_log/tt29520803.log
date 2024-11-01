@@ -1,8 +1,0 @@
-2024-10-25 23:38:09,937 - INFO - Fetching reviews for movie_id: tt29520803
-2024-10-25 23:38:12,117 - INFO - Accessed URL: https://www.imdb.com/title/tt29520803/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-25 23:38:12,179 - INFO - Total reviews found: 0
-2024-10-25 23:38:12,179 - INFO - No reviews found for Movie ID tt29520803
-2024-10-27 23:05:21,066 - INFO - Fetching reviews for movie_id: tt29520803
-2024-10-27 23:05:28,786 - INFO - Accessed URL: https://www.imdb.com/title/tt29520803/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-27 23:05:28,823 - INFO - Total reviews found: 0
-2024-10-27 23:05:28,824 - INFO - No reviews found for Movie ID tt29520803

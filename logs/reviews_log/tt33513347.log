@@ -1,8 +1,0 @@
-2024-10-25 23:37:54,172 - INFO - Fetching reviews for movie_id: tt33513347
-2024-10-25 23:37:57,567 - INFO - Accessed URL: https://www.imdb.com/title/tt33513347/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-25 23:37:57,601 - INFO - Total reviews found: 0
-2024-10-25 23:37:57,601 - INFO - No reviews found for Movie ID tt33513347
-2024-10-27 23:04:26,614 - INFO - Fetching reviews for movie_id: tt33513347
-2024-10-27 23:04:33,293 - INFO - Accessed URL: https://www.imdb.com/title/tt33513347/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-27 23:04:33,433 - INFO - Total reviews found: 0
-2024-10-27 23:04:33,433 - INFO - No reviews found for Movie ID tt33513347

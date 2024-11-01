@@ -1,8 +1,0 @@
-2024-10-25 23:32:28,933 - INFO - Fetching reviews for movie_id: tt12567614
-2024-10-25 23:32:32,280 - INFO - Accessed URL: https://www.imdb.com/title/tt12567614/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-25 23:32:32,312 - INFO - Total reviews found: 0
-2024-10-25 23:32:32,313 - INFO - No reviews found for Movie ID tt12567614
-2024-10-27 22:42:56,017 - INFO - Fetching reviews for movie_id: tt12567614
-2024-10-27 22:43:03,782 - INFO - Accessed URL: https://www.imdb.com/title/tt12567614/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-27 22:43:03,829 - INFO - Total reviews found: 0
-2024-10-27 22:43:03,830 - INFO - No reviews found for Movie ID tt12567614

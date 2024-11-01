@@ -1,8 +1,0 @@
-2024-10-25 23:37:39,055 - INFO - Fetching reviews for movie_id: tt33730911
-2024-10-25 23:37:41,196 - INFO - Accessed URL: https://www.imdb.com/title/tt33730911/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-25 23:37:41,254 - INFO - Total reviews found: 0
-2024-10-25 23:37:41,255 - INFO - No reviews found for Movie ID tt33730911
-2024-10-27 23:04:15,137 - INFO - Fetching reviews for movie_id: tt33730911
-2024-10-27 23:04:22,834 - INFO - Accessed URL: https://www.imdb.com/title/tt33730911/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-27 23:04:22,984 - INFO - Total reviews found: 0
-2024-10-27 23:04:22,984 - INFO - No reviews found for Movie ID tt33730911

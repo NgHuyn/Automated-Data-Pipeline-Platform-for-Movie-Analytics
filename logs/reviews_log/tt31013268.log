@@ -1,8 +1,0 @@
-2024-10-23 22:34:42,280 - INFO - Fetching reviews for movie_id: tt31013268
-2024-10-23 22:34:44,499 - INFO - Accessed URL: https://www.imdb.com/title/tt31013268/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-23 22:34:44,552 - INFO - Total reviews found: 0
-2024-10-23 22:34:44,552 - INFO - No reviews found for Movie ID tt31013268
-2024-10-27 23:00:05,225 - INFO - Fetching reviews for movie_id: tt31013268
-2024-10-27 23:00:12,862 - INFO - Accessed URL: https://www.imdb.com/title/tt31013268/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-27 23:00:12,898 - INFO - Total reviews found: 0
-2024-10-27 23:00:12,900 - INFO - No reviews found for Movie ID tt31013268

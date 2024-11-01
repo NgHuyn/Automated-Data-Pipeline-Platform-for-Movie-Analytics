@@ -1,8 +1,0 @@
-2024-10-25 23:38:28,517 - INFO - Fetching reviews for movie_id: tt32411014
-2024-10-25 23:38:31,793 - INFO - Accessed URL: https://www.imdb.com/title/tt32411014/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-25 23:38:31,825 - INFO - Total reviews found: 0
-2024-10-25 23:38:31,826 - INFO - No reviews found for Movie ID tt32411014
-2024-10-27 23:08:53,928 - INFO - Fetching reviews for movie_id: tt32411014
-2024-10-27 23:09:01,666 - INFO - Accessed URL: https://www.imdb.com/title/tt32411014/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-27 23:09:01,720 - INFO - Total reviews found: 0
-2024-10-27 23:09:01,720 - INFO - No reviews found for Movie ID tt32411014

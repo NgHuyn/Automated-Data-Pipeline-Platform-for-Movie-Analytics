@@ -1,8 +1,0 @@
-2024-10-25 23:35:49,891 - INFO - Fetching reviews for movie_id: tt28228459
-2024-10-25 23:35:53,223 - INFO - Accessed URL: https://www.imdb.com/title/tt28228459/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-25 23:35:53,257 - INFO - Total reviews found: 0
-2024-10-25 23:35:53,258 - INFO - No reviews found for Movie ID tt28228459
-2024-10-27 22:54:24,872 - INFO - Fetching reviews for movie_id: tt28228459
-2024-10-27 22:54:32,258 - INFO - Accessed URL: https://www.imdb.com/title/tt28228459/reviews/?sort=submission_date%2Cdesc&dir=desc
-2024-10-27 22:54:32,291 - INFO - Total reviews found: 0
-2024-10-27 22:54:32,292 - INFO - No reviews found for Movie ID tt28228459

@@ -165,9 +165,19 @@ def update_movie_reviews(db):
 
     # Case 2: Collection does not exist
     else:
+        count_movie = 0
         logging.info("No existing popular movies found. Fetching new top 10 popular movies.")
         for movie in popular_movies:
             imdb_id = movie['Movie ID']
+            
+            # Check if imdb_id exists in the database
+            tmdb_id = tmdb_api.find_tmdb_id_by_imdb_id(imdb_id)
+            if not tmdb_id:
+                logging.warning(f"TMDB ID not found for IMDB ID {imdb_id}. Skipping.")
+                continue
+
+            if count_movie >= 10:
+                break
             
             logging.info(f"Fetching reviews for new movie ID: {imdb_id}")
             try:
@@ -176,6 +186,7 @@ def update_movie_reviews(db):
 
                 # Insert to db top_popular_movies
                 update_db(db, imdb_id, 'insert_db_top_popular', new_reviews, fetch_reviews.total_reviews, fetch_reviews.last_date_review)
+                count_movie += 1
             except Exception as e:
                 logging.error(f"Error fetching reviews for movie ID {imdb_id}: {e}")
 

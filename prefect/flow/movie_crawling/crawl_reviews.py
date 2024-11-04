@@ -64,7 +64,7 @@ class MovieReviewScraper(BaseScraper):
                 soup = BeautifulSoup(html, 'html.parser')
 
                 # Extract reviews for the current movie and accumulate total_reviews
-                self.movie_info, num_reviews = self._extract_reviews(soup, self.movie_id, self.last_date_review)
+                self.movie_info, num_reviews = self._extract_reviews(soup, self.movie_id, self.last_date_review, new_reviews_count)
 
                 if num_reviews == 0:
                     self.logger.warning(f"No reviews found for Movie ID: {self.movie_id}.")
@@ -186,7 +186,7 @@ class MovieReviewScraper(BaseScraper):
         
         return base_wait_time + additional_wait_time
 
-    def _extract_reviews(self, soup, movie_id, last_date):
+    def _extract_reviews(self, soup, movie_id, last_date, new_reviews_count):
         # Attempt to extract reviews using the primary selector
         reviews = soup.select('article.user-review-item')
 
@@ -209,7 +209,7 @@ class MovieReviewScraper(BaseScraper):
                     # last_date = datetime.strptime(last_date, "%Y-%m-%d")
                     # if parsed_review['Date'] <= last_date:
                     #     break
-                    if count >= self.total_reviews:
+                    if count >= new_reviews_count:
                         break
             except Exception:
                 self.logger.error(f"Error at comparison Date")

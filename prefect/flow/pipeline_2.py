@@ -10,6 +10,18 @@ from etl.update_data import update_reviews
 
 logging.basicConfig(level=logging.INFO)
 
+# Connect to MongoDB and TMDB API
+def connect_mongodb_and_tmdb_api():
+    load_dotenv()
+    # Database configuration
+    mongo_uri = os.getenv('MONGO_URI')
+    client = pymongo.MongoClient(mongo_uri)
+    db_name = os.getenv('MONGODB_DATABASE', 'default_db_name').replace(' ', '_')
+    db = client[db_name]
+    
+    tmdb_api_key = os.getenv('TMDB_API_KEY')
+    return db, tmdb_api_key
+
 # Task to fetch reviews and load movies in a week
 @task(retries=2)
 def extract_and_load_recent_movies(release_date_from, release_date_to):
@@ -23,15 +35,9 @@ def update_movie_reviews(db, tmdb_api_key):
 
 @flow(name="Movie-ETL-History", log_prints=True)
 def movie_etl_flow():
-    load_dotenv()
-    # Database configuration
-    mongo_uri = os.getenv('MONGO_URI')
-    client = pymongo.MongoClient(mongo_uri)
-    db_name = os.getenv('MONGODB_DATABASE', 'default_db_name').replace(' ', '_')
-    db = client[db_name]
+    # Connect to MongoDB and TMDB API
+    db, tmdb_api_key=connect_mongodb_and_tmdb_api()
     
-    tmdb_api_key = os.getenv('TMDB_API_KEY')
-
     release_date_from = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
     release_date_to = datetime.now().strftime('%Y-%m-%d')
 

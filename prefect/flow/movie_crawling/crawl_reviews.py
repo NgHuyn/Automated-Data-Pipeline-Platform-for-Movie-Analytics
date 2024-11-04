@@ -207,7 +207,9 @@ class MovieReviewScraper(BaseScraper):
             try:
                 if last_date is not None:
                     # last_date = datetime.strptime(last_date, "%Y-%m-%d")
-                    if parsed_review['Date'] <= last_date:
+                    # if parsed_review['Date'] <= last_date:
+                    #     break
+                    if count >= self.total_reviews:
                         break
             except Exception:
                 self.logger.error(f"Error at comparison Date")

@@ -49,6 +49,9 @@ class MongoDataExtractor:
 
             # Create a mapping from imdb_id to movie_id
             imdb_id_to_movie_id = dict(zip(movie_details_df['imdb_id'], movie_details_df['id']))
+
+            top_movie_details_df = self.load_collection_as_dataframe('top_popular_movies_details')[['id', 'imdb_id']]
+            top_imdb_id_to_movie_id = dict(zip(top_movie_details_df['imdb_id'], top_movie_details_df['id']))
             reviews_data = []  # List to store transformed review data
 
             # Iterate over each row in the DataFrame
@@ -58,8 +61,14 @@ class MongoDataExtractor:
                 mapped_movie_id = imdb_id_to_movie_id.get(movie_id)
                 
                 if mapped_movie_id is None:
-                    logging.warning(f"Movie ID {movie_id} not found in movie_details.")
-                    continue  # Skip if the Movie ID is not found
+                    mapped_movie_id = top_imdb_id_to_movie_id.get(movie_id)
+
+                    #delete old imdb_id in db top_popular_movies_details
+                    self.db['top_popular_movies'].delete_one({'imdb_id': mapped_movie_id})
+
+                    if mapped_movie_id is None:
+                        logging.warning(f"Movie ID {movie_id} not found in both movie_details and top_popular_movies_details.")
+                        continue # Skip if the Movie ID is not found
 
                 # Iterate over each review and extract relevant information
                 for review in reviews:
@@ -141,7 +150,7 @@ class MongoDataExtractor:
                 if collection_data is not None:
                     transformed_data.update(collection_data)
 
-                if collection not in ['movie_genres', 'processing_flags', 'top_popular_movies']:
+                if collection not in ['movie_genres', 'processing_flags', 'top_popular_movies', 'top_popular_movies_details']:
                     self.db[collection].delete_many({})
 
         # Check and mark processed for movie_genres at the end of processing

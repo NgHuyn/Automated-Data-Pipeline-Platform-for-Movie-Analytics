@@ -104,6 +104,13 @@ def update_reviews(db, tmdb_api_key, release_date_from, release_date_to):
                     update_db(db, imdb_id, 'update_db_top_popular', new_reviews, fetch_reviews.total_reviews, fetch_reviews.last_date_review)
                     logging.info(f"Added {len(new_reviews['Reviews'])} new reviews for {imdb_id}.")
                     logging.info(f"Updated top_popular_movies for {imdb_id}.")
+
+                    # Update db top_popular_movies_details
+                    db['top_popular_movies_details'].insert_one({
+                                'imdb_id': imdb_id,
+                                'id': tmdb_id
+                    })
+
                 else:
                     # Update db top_popular_movies
                     if fetch_reviews.total_reviews != 0:
@@ -147,6 +154,12 @@ def update_reviews(db, tmdb_api_key, release_date_from, release_date_to):
 
                 # Insert to db top_popular_movies
                 update_db(db, imdb_id, 'insert_db_top_popular', new_reviews, fetch_reviews.total_reviews, fetch_reviews.last_date_review)
+
+                # Update db top_popular_movies_details
+                db['top_popular_movies_details'].insert_one({
+                            'imdb_id': imdb_id,
+                            'id': tmdb_id
+                })
                 count_movie += 1
             except Exception as e:
                 logging.error(f"Error fetching reviews for movie ID {imdb_id}: {e}")

@@ -50,7 +50,7 @@ def load_data(transformed_data):
 
 @flow(name="ETL-pipeline", log_prints=True)
 def movie_etl_pipeline():
-    release_date_from = (datetime.now() - timedelta(days=3)).strftime('%Y-%m-%d')
+    release_date_from = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
     release_date_to = datetime.now().strftime('%Y-%m-%d')
 
     extract_and_load_recent_movies(release_date_from, release_date_to)
@@ -59,8 +59,7 @@ def movie_etl_pipeline():
     load_data(transformed_data)
 
 if __name__ == "__main__":
-    # """Main ETL pipeline for movie data"""
-    # movie_etl_pipeline.serve(name="Movie ETL Pipeline",
-    #                         tags=["pipeline2"])
+    """Main ETL pipeline for movie data"""
+    movie_etl_pipeline.serve(name="Movie ETL Pipeline",
+                            tags=["pipeline2"])
 
-    movie_etl_pipeline()

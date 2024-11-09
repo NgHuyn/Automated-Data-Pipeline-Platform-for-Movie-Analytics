@@ -4,3 +4,4 @@ data/__pycache__/
 data/test_movie.json
 *.log
 prefect-env/
+new-env/

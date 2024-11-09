@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: your_username       # Thay thế với tên người dùng bạn muốn
+      POSTGRES_PASSWORD: your_password   # Thay thế với mật khẩu bạn muốn
+      POSTGRES_DB: your_database         # Tên database muốn tạo
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - pg_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com       # Email đăng nhập pgAdmin
+      PGADMIN_DEFAULT_PASSWORD: admin              # Mật khẩu đăng nhập pgAdmin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - pg_network
+
+volumes:
+  postgres_data:
+
+networks:
+  pg_network:

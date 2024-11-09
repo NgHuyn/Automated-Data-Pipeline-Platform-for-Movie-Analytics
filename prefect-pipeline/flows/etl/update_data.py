@@ -4,7 +4,6 @@ from movie_crawling.tmdb_api import TMDBApi
 from datetime import datetime, timedelta
 import logging
 
-
 def check_top_popular_movies(db):
     collection_name = 'top_popular_movies'
     if collection_name not in db.list_collection_names():

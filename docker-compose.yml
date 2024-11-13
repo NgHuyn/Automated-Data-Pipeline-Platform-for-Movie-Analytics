@@ -1,35 +1,69 @@
-version: '3.8'
+networks:
+  docker-net:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:
+  prefect:
 
 services:
   postgres:
-    image: postgres:latest
+    image: postgres
     container_name: postgres_container
     environment:
-      POSTGRES_USER: your_username       # Thay thế với tên người dùng bạn muốn
-      POSTGRES_PASSWORD: your_password   # Thay thế với mật khẩu bạn muốn
-      POSTGRES_DB: your_database         # Tên database muốn tạo
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "5432:5432"
+      - "5432:5432"  
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres:/var/lib/postgresql/data
     networks:
-      - pg_network
+      - docker-net
+    restart: unless-stopped
 
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin_container
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com       # Email đăng nhập pgAdmin
-      PGADMIN_DEFAULT_PASSWORD: admin              # Mật khẩu đăng nhập pgAdmin
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
-      - "5050:80"
-    depends_on:
-      - postgres
+      - "5050:80"  
     networks:
-      - pg_network
+      - docker-net
+    restart: unless-stopped
 
-volumes:
-  postgres_data:
+  prefect-server:
+    build:
+      context: ./prefect-pipeline
+    image: prefect
+    hostname: prefect-server
+    container_name: prefect-server
+    volumes:
+      - prefect:/root/.prefect
+    command: prefect server start
+    environment:
+      - PREFECT_UI_URL=http://127.0.0.1:4200/api
+      - PREFECT_API_URL=http://127.0.0.1:4200/api
+      - PREFECT_SERVER_API_HOST=0.0.0.0
+    ports:
+      - 4200:4200
+    networks:
+      - docker-net
 
-networks:
-  pg_network:
+  prefect:
+    image: prefect:latest
+    container_name: prefect
+    restart: always
+    volumes:
+      - "./prefect-pipeline/flows:/opt/prefect-pipeline/flows"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    env_file:
+      - .env
+    networks:
+      - docker-net
+    depends_on:
+      - prefect-server

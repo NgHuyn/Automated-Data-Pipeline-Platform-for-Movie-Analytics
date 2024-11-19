@@ -56,7 +56,7 @@ def manually_etl_pipeline(release_date_from, release_date_to):
 
 @flow(name="ETL-pipeline", log_prints=True)
 def movie_etl_pipeline():
-    release_date_from = (datetime.now() - timedelta(days=0)).strftime('%Y-%m-%d')
+    release_date_from = (datetime.now() - timedelta(days=3)).strftime('%Y-%m-%d')
     release_date_to = datetime.now().strftime('%Y-%m-%d')
 
     fetch_movie_data(release_date_from, release_date_to)

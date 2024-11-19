@@ -53,7 +53,7 @@ def fetch_and_save_movie_data(release_date_from, release_date_to):
     # Fetch the full list of movies
     movies = scraper.fetch_movies(limit=None)
 
-    # Process each movie without batching
+    # Process each movie 
     for movie in movies:
         logging.info(f"Processing movie: {movie.get('Movie ID')}")
         

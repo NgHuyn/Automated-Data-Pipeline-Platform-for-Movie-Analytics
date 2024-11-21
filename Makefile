@@ -8,7 +8,6 @@ help:
 	@echo "  make down             - Stop all services"
 	@echo "  make restart          - Restart all services"
 	@echo "  make logs             - View logs for all services"
-	@echo "  make to-psql		   - Connect to postgres"
 	@echo "  make pgadmin-access   - Access Postgres database via PgAdmin"
 	@echo "  make clean            - Remove all stopped services and unused networks"
 
@@ -32,10 +31,6 @@ restart:
 .PHONY: logs
 logs:
 	docker compose logs -f
-
-.PHONY: to-psql
-to-psql:
-	docker exec -ti postgres_container psql postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
 
 .PHONY: pgadmin-access
 pgadmin-access:

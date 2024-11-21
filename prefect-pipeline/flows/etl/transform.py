@@ -9,18 +9,18 @@ logging.basicConfig(level=logging.INFO)
 
 class MongoDataExtractor:
     def __init__(self):
-        """Initialize and configure MongoDB connection."""
+        """Initialize and configure MongoDB connection"""
         load_dotenv()
         self.db = self.connect_to_mongo()
 
     def connect_to_mongo(self):
-        """Connect to MongoDB and return the database object."""
+        """Connect to MongoDB and return the database object"""
         client = pymongo.MongoClient(os.getenv('MONGO_URI'))
         db_name = os.getenv('MONGODB_DATABASE', 'default_db_name').replace(' ', '_')
         return client[db_name]
 
     def load_collection_as_dataframe(self, collection_name):
-        """Load MongoDB collection into a DataFrame."""
+        """Load MongoDB collection into a DataFrame"""
         data = list(self.db[collection_name].find({}))
         if not data:
             logging.warning(f"No data found in collection: {collection_name}")
@@ -34,11 +34,9 @@ class MongoDataExtractor:
         return True
     
     def process_all_collections(self):
-        """Load and transform all specified collections from MongoDB."""
-        
-        # Function to transform movie reviews DataFrame and map Movie ID to movie_id
+        """Load and transform all specified collections from MongoDB"""
         def transform_movie_reviews(df, movie_details_df):
-            """Transform movie reviews DataFrame."""
+            """Transform movie reviews"""
             required_columns = ['Movie ID', 'Reviews']
             
             # Check for required columns in the DataFrame
@@ -50,11 +48,22 @@ class MongoDataExtractor:
             # Create a mapping from imdb_id to movie_id
             imdb_id_to_movie_id = dict(zip(movie_details_df['imdb_id'], movie_details_df['id']))
 
-            top_movie_details_df = self.load_collection_as_dataframe('top_popular_movies_details')[['id', 'imdb_id']]
-            top_imdb_id_to_movie_id = dict(zip(top_movie_details_df['imdb_id'], top_movie_details_df['id']))
+            # Check if the top_popular_movies_details collection exists
+            if 'top_popular_movies_details' in self.db.list_collection_names():
+                top_movie_details_df = self.load_collection_as_dataframe('top_popular_movies_details')[['id', 'imdb_id']]
+                top_imdb_id_to_movie_id = dict(zip(top_movie_details_df['imdb_id'], top_movie_details_df['id']))
+            else:
+                top_imdb_id_to_movie_id = {}
+
+            # Check if the top_popular_movies collection exists
+            if 'top_popular_movies' in self.db.list_collection_names():
+                top_popular_movies_collection = self.db['top_popular_movies']
+            else:
+                top_popular_movies_collection = None
+
             reviews_data = []  # List to store transformed review data
 
-            # Iterate over each row in the DataFrame
+            # Iterate over each row in the df
             for index, row in df.iterrows():
                 movie_id = row['Movie ID']
                 reviews = row['Reviews']
@@ -63,12 +72,13 @@ class MongoDataExtractor:
                 if mapped_movie_id is None:
                     mapped_movie_id = top_imdb_id_to_movie_id.get(movie_id)
 
-                    #delete old imdb_id in db top_popular_movies_details
-                    self.db['top_popular_movies'].delete_one({'imdb_id': mapped_movie_id})
+                    if top_popular_movies_collection is not None:
+                        # Delete old imdb_id in top_popular_movies
+                        top_popular_movies_collection.delete_one({'imdb_id': mapped_movie_id})
 
                     if mapped_movie_id is None:
                         logging.warning(f"Movie ID {movie_id} not found in both movie_details and top_popular_movies_details.")
-                        continue # Skip if the Movie ID is not found
+                        continue  # Skip if the Movie ID is not found
 
                 # Iterate over each review and extract relevant information
                 for review in reviews:

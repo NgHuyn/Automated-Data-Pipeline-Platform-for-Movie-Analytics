@@ -54,7 +54,7 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
         return
 
     try:
-        # Table creation queries
+        # Table creation queries (same as before)
         table_queries = {
             'genre': """
             CREATE TABLE IF NOT EXISTS genre (
@@ -144,9 +144,15 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
             logging.info(f"Table {table_name} already has data. Skipping data load.")
             return
 
-        # Filter existing IDs for actor or director tables
-        if table_name in ['actor', 'director']:
-            id_column = 'actor_id' if table_name == 'actor' else 'director_id'
+        # Filter existing IDs for actor and director tables
+        if table_name == 'actor':
+            id_column = 'actor_id'
+        elif table_name == 'director':
+            id_column = 'director_id'
+        else:
+            id_column = None
+
+        if id_column:
             data_ids = data[id_column].tolist()
             filtered_ids = filter_existing_ids(conn, table_name, id_column, data_ids)
             data = data[data[id_column].isin(filtered_ids)]

@@ -5,3 +5,4 @@ data/test_movie.json
 *.log
 prefect-env/
 new-env/
+.env

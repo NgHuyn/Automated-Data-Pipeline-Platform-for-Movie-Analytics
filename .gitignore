@@ -6,3 +6,4 @@ data/test_movie.json
 prefect-env/
 new-env/
 .env
+/notebook

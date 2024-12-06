@@ -106,10 +106,10 @@ make up
 ```
 
 5. Verify services:
-1. Prefect
-    - [`localhost:4200`](http://localhost:4200/): Prefect Server
-2. pgAdmin
-    - [`localhost:5050`](http://localhost:5050/): pgAdmin
+    1. Prefect
+        - [`localhost:4200`](http://localhost:4200/): Prefect Server
+    2. pgAdmin
+        - [`localhost:5050`](http://localhost:5050/): pgAdmin
   
 ![docker_container](./image/docker_container.jpg)
 ### Run your data pipeline

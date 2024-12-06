@@ -1,12 +1,12 @@
-# ETL-Data-Pipeline-for-Aspect-Based-Sentiment-Analysis
+# ETL-Data-Pipeline-for-Aspect-Based-Sentiment-Analysis  
 
-## Table of contents :pushpin:
+## Table of Contents :pushpin:
 - [Overview](#overview)  
 - [Prerequisites](#prerequisites)  
 - [Features](#features)  
 - [Installation](#installation)  
-    - [Set up environment](#set-up-environment)  
-    - [Run your data pipeline](#run-your-data-pipeline)  
+    - [Set up Environment](#set-up-environment)  
+    - [Run Your Data Pipeline](#run-your-data-pipeline)  
     - [Dashboard](#power-bi-dashboard)  
 - [Future Work](#future-work)  
 - [Contributors](#contributors)  
@@ -15,37 +15,50 @@
 
 ## Overview  
 
-This project builds an ETL (Extract, Transform, Load) data pipeline for analyzing and developing an **Aspect-Based Sentiment Analysis (ABSA)** model for movie reviews. By leveraging data from IMDB and The Movie Database (TMDB) API, this pipeline automates the collection, processing, and storage of movie-related data in a structured format.
+This project presents a robust **ETL (Extract, Transform, Load) data pipeline** tailored for developing an **Aspect-Based Sentiment Analysis (ABSA)** model. By leveraging reviews from IMDB and detailed metadata from The Movie Database (TMDB) API, the pipeline automates the collection, transformation, and storage of movie data in a structured, accessible format.  
 
-### Project Structure
-- **Data Sources**: Data is extracted from IMDB (reviews) and TMDB (movie details).  
+### Key Objectives
+1. Automate data workflows for scalability and efficiency.  
+2. Enable detailed sentiment analysis using ABSA techniques.  
+3. Provide interactive visual insights through Power BI dashboards.  
+
+### Project Structure  
+- **Data Sources**:  
+  - **IMDB**: Provides user reviews for aspect-based analysis.  
+  - **TMDB**: Supplies metadata, including genres, cast, crew, and popularity scores.  
+
 - **Data Pipeline**:  
-  1. Extract: Gather data from IMDB and TMDB APIs.  
-  2. Transform: Process and clean data using Python.  
-  3. Load: Store transformed data in PostgreSQL.  
-- **Visualization**: Build interactive dashboards in Power BI for insights.  
+  1. **Extract**: Fetch reviews from IMDB and metadata from TMDB.  
+  2. **Transform**: Clean, preprocess, and enhance data using Python scripts.  
+  3. **Load**: Store transformed data into PostgreSQL for analysis and visualization.  
 
-### Design Architecture
-This project uses Docker for containerization and Prefect for task orchestration.  
+- **Visualization**:  
+  Leverage Power BI to design insightful dashboards, enabling stakeholders to explore trends and sentiment dynamics visually.  
+
+### Design Architecture  
+This project integrates modern tools for a seamless data pipeline:
+- **Docker**: Ensures portability and easy deployment.  
+- **Prefect**: Manages orchestration and task scheduling.  
+
 Steps:  
-1. Crawl reviews from IMDB, then fetch additional movie details (genre, actors, directors) via TMDB API.  
-2. Extract and load raw data into **MongoDB Atlas** (staging area).  
-3. Transform data in Python directly from MongoDB Atlas.  
-4. Load cleaned data into **PostgreSQL**.  
-5. Build Power BI dashboards for insights.  
+1. **Extraction**: Retrieve raw reviews and metadata from APIs.  
+2. **Staging**: Store raw data in **MongoDB Atlas** as the staging area.  
+3. **Transformation**: Clean and process data in Python.  
+4. **Storage**: Load structured data into **PostgreSQL**.  
+5. **Visualization**: Build and update dashboards with Power BI.  
 
 ![Architecture](./image/data_pipeline.png)  
 
 ### Data Schema  
-The schema outlines the relationships between movies, reviews, actors, and providers.  
+The project adopts a relational schema capturing key relationships among entities such as movies, reviews, actors, and providers.  
 ![Schema](./image/data_schema.png)  
 
 ---
 
 ## Prerequisites  
 
-Before running the pipeline, ensure you have:  
-- **TMDB API Key**: Create an account and get your API key from [The Movie Database](https://developer.themoviedb.org/docs/getting-started).  
+To set up and run the pipeline, ensure you have the following:  
+- **TMDB API Key**: Obtain your API key from [The Movie Database](https://developer.themoviedb.org/docs/getting-started).  
 - **Docker**: Install Docker Desktop, including Docker Compose ([Download Docker](https://www.docker.com/products/docker-desktop/)).  
 - **MongoDB Atlas Account**: Register for free [here](https://www.mongodb.com/cloud/atlas/register).  
 
@@ -53,40 +66,48 @@ Before running the pipeline, ensure you have:
 
 ## Features  
 
-This project includes two main pipelines:  
-1. **Manually-ETL-Pipeline**:  
-   - Triggered manually to fetch historical data based on user-provided date ranges (`release_date_from`, `release_date_to`).  
-2. **ETL-Pipeline**:  
-   - Automatically runs every 7 days.  
-   - Updates weekly data and checks the top 10 most popular movies of the last 7 days based on popularity scores to fetch new reviews.  
+The project implements two distinct pipelines:  
+1. **Manual ETL Pipeline**:  
+   - Designed for fetching historical data based on user-defined date ranges (`release_date_from`, `release_date_to`).  
+   - Triggered manually through the Prefect UI.  
+
+2. **Automated ETL Pipeline**:  
+   - Runs automatically every 7 days.  
+   - Updates weekly data and fetches reviews for the top 10 most popular movies based on TMDB popularity scores.  
 
 ---
 
 ## Installation  
 
-### Set up environment  
-Clone this repository:
+### Set up Environment   
+1. Clone this repository:
 ```bash
 git clone [https://github.com/NgHuyn/ETL-Data-Pipeline-for-ABSA.git
 cd ETL-Data-Pipeline-for-ABSA
 ```
-then create `.env` file base on [env_template](./env_template)
+2. Create a .env file based on the provided template:
 ```bash
 cp env_template .env
 ```
-Fill your informations blank in `.env` file, this can be done in [Prerequisite](#prerequisite).
-And now, we can run our pipline! Let's build your Docker images of this project by typing `make build` in your
-terminal 
+Fill in the required details as per the [Prerequisite](#prerequisite).
+3. Build Docker images:
+```bash
+make build
+```
+**If you encounter issues, restart Docker or remove the existing image and try again.**
 
-Note: if you don't have WSL(Ubuntu) in your terminal, you can install it to you `make-`. Or just use the corresponding replace statement in the [Makefile](./Makefile)
+Note: if you don't have WSL (Ubuntu) in your terminal, you can install it to use `make-`. Or just use the corresponding replace statement in the [Makefile](./Makefile)
 
 > This process might take a few minutes, so just chill and take a cup of coffee :coffee:
 
 **Note: if you failed in this step, just remove the image or restart Docker and try again**
 
-If you've done building Docker images, now its time to run your system. Just type `make up` 
+4. Start the system:
+```bash
+make up
+```
 
-Then check your services to make sure everything work correctly:
+5. Verify services:
 1. Prefect
     - [`localhost:4200`](http://localhost:4200/): Prefect Server
 2. pgAdmin
@@ -101,9 +122,9 @@ prefect UI, let's go to Deployment section, you'll see 2 deployments there corre
 - Trigger it manually by entering the desired date range.
 <div style="display: flex; justify-content: space-between;">
 
-![pipeline1-a](./image/pipeline1-a.jpg)
+![pipeline1-a](./image/pipeline1-a.png)
 
-![pipeline1-b](./image/pipeline1-b.jpg)
+![pipeline1-b](./image/pipeline1-b.png)
 
 </div>
 
@@ -113,9 +134,9 @@ prefect UI, let's go to Deployment section, you'll see 2 deployments there corre
 
 <div style="display: flex; justify-content: space-between;">
 
-![pipline2-a](./image/pipeline2-a.jpg)
+![pipline2-a](./image/pipeline2-a.png)
 
-![pipline2-b](./image/pipeline2-b.jpg)
+![pipline2-b](./image/pipeline2-b.png)
 
 ### Power BI Dashboard
 ![powerbi](./image/powerbi-dash.jpg)

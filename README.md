@@ -101,9 +101,9 @@ prefect UI, let's go to Deployment section, you'll see 2 deployments there corre
 - Trigger it manually by entering the desired date range.
 <div style="display: flex; justify-content: space-between;">
 
-![pipeline1-a](./image/pipline1-a.jpg)
+![pipeline1-a](./image/pipeline1-a.jpg)
 
-![pipeline1-b](./image/pipline1-b.jpg)
+![pipeline1-b](./image/pipeline1-b.jpg)
 
 </div>
 

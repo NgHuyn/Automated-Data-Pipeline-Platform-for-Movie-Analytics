@@ -100,6 +100,7 @@ make build
 **If you encounter issues, restart Docker or remove the existing image and try again.**
 
 This process might take a few minutes, so just chill and take a cup of coffee :coffee:
+
 4. Start the system:
 ```bash
 make up

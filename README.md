@@ -95,14 +95,11 @@ Fill in the required details as per the [Prerequisite](#prerequisite).
 ```bash
 make build
 ```
-**If you encounter issues, restart Docker or remove the existing image and try again.**
-
 > Note: if you don't have WSL (Ubuntu) in your terminal, you can install it to use `make-`. Or just use the corresponding replace statement in the [Makefile](./Makefile)
 
-> This process might take a few minutes, so just chill and take a cup of coffee :coffee:
+**If you encounter issues, restart Docker or remove the existing image and try again.**
 
-**Note: if you failed in this step, just remove the image or restart Docker and try again**
-
+This process might take a few minutes, so just chill and take a cup of coffee :coffee:
 4. Start the system:
 ```bash
 make up

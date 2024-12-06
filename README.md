@@ -50,7 +50,7 @@ Steps:
 ![Architecture](./image/data_pipeline.png)  
 
 ### Data Schema  
-The project adopts a relational schema capturing key relationships among entities such as movies, reviews, actors, and providers.  
+The project adopts a relational schema capturing key relationships among entities such as movies, reviews, actors, and directors.  
 ![Schema](./image/data_schema.png)  
 
 ---
@@ -90,13 +90,14 @@ cd ETL-Data-Pipeline-for-ABSA
 cp env_template .env
 ```
 Fill in the required details as per the [Prerequisite](#prerequisite).
+
 3. Build Docker images:
 ```bash
 make build
 ```
 **If you encounter issues, restart Docker or remove the existing image and try again.**
 
-Note: if you don't have WSL (Ubuntu) in your terminal, you can install it to use `make-`. Or just use the corresponding replace statement in the [Makefile](./Makefile)
+> Note: if you don't have WSL (Ubuntu) in your terminal, you can install it to use `make-`. Or just use the corresponding replace statement in the [Makefile](./Makefile)
 
 > This process might take a few minutes, so just chill and take a cup of coffee :coffee:
 

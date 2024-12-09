@@ -112,7 +112,7 @@ make up
     2. pgAdmin
         - [`localhost:5050`](http://localhost:5050/): pgAdmin
   
-![docker_container](./image/docker_container.jpg)
+![docker_container](./image/docker_container.png)
 ### Run your data pipeline
 We use [Prefect](https://www.prefect.io/) to build our data pipeline. When you check out port `4200`, you'll see
 prefect UI, let's go to Deployment section, you'll see 2 deployments there correspond to 2 data pipelines

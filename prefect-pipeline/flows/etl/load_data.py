@@ -143,7 +143,7 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
             );"""
         }
 
-        # Create the tables in order if necessary
+        # Create the tables in order 
         create_tables_in_order(conn, table_queries)
 
         # Check if the table is empty for 'genre'

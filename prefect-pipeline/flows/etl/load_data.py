@@ -47,6 +47,13 @@ def filter_existing_ids(conn, table_name, column_name, ids):
         existing_ids = set(row[0] for row in cursor.fetchall())
     return [id_ for id_ in ids if id_ not in existing_ids]
 
+def create_tables_in_order(conn, table_queries):
+    """Create tables in a specified order."""
+    table_creation_order = ['genre', 'movie', 'movie_genre', 'actor', 'director', 
+                            'movie_cast', 'movie_direction', 'review']
+    for table_name in table_creation_order:
+        create_table_if_not_exists(conn, table_name, table_queries[table_name])
+
 def load_data_to_postgres(data: pd.DataFrame, table_name: str):
     """Load data into PostgreSQL table."""
     conn = create_connection()
@@ -54,7 +61,7 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
         return
 
     try:
-        # Table creation queries (same as before)
+        # Table creation queries 
         table_queries = {
             'genre': """
             CREATE TABLE IF NOT EXISTS genre (
@@ -149,6 +156,8 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
             id_column = 'actor_id'
         elif table_name == 'director':
             id_column = 'director_id'
+        elif table_name == 'movie':
+            id_column = 'movie_id'
         else:
             id_column = None
 
@@ -172,9 +181,3 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
     finally:
         conn.close()
 
-def create_tables_in_order(conn, table_queries):
-    """Create tables in a specified order."""
-    table_creation_order = ['genre', 'movie', 'movie_genre', 'actor', 'director', 
-                            'movie_cast', 'movie_direction', 'review']
-    for table_name in table_creation_order:
-        create_table_if_not_exists(conn, table_name, table_queries[table_name])

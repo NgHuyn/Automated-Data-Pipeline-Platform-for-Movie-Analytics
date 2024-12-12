@@ -9,18 +9,18 @@ logging.basicConfig(level=logging.INFO)
 
 class MongoDataExtractor:
     def __init__(self):
-        """Initialize and configure MongoDB connection"""
+        """Initialize and configure MongoDB connection."""
         load_dotenv()
         self.db = self.connect_to_mongo()
 
     def connect_to_mongo(self):
-        """Connect to MongoDB and return the database object"""
+        """Connect to MongoDB and return the database object."""
         client = pymongo.MongoClient(os.getenv('MONGO_URI'))
         db_name = os.getenv('MONGODB_DATABASE', 'default_db_name').replace(' ', '_')
         return client[db_name]
 
     def load_collection_as_dataframe(self, collection_name):
-        """Load MongoDB collection into a DataFrame"""
+        """Load MongoDB collection into a DataFrame."""
         data = list(self.db[collection_name].find({}))
         if not data:
             logging.warning(f"No data found in collection: {collection_name}")
@@ -34,7 +34,7 @@ class MongoDataExtractor:
         return True
     
     def process_all_collections(self):
-        """Load and transform all specified collections from MongoDB"""
+        """Load and transform all specified collections from MongoDB."""
         def transform_movie_reviews(df, movie_details_df):
             """Transform movie reviews"""
             required_columns = ['Movie ID', 'Reviews']

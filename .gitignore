@@ -6,4 +6,5 @@ data/test_movie.json
 prefect-env/
 new-env/
 .env
-notebook
+
+prefect-pipeline/__init__.py

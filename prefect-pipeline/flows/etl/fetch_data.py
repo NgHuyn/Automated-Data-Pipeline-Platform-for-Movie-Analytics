@@ -2,6 +2,7 @@ from movie_crawling.crawl_movies import MoviesScraper
 from movie_crawling.crawl_reviews import MovieReviewScraper
 from movie_crawling.tmdb_api import TMDBApi  
 from dotenv import load_dotenv
+from requests.exceptions import HTTPError
 import os
 import pymongo
 import logging
@@ -37,8 +38,6 @@ def fetch_and_save_movie_data(release_date_from, release_date_to):
     # Initialize MongoDB client and scrapers
     client = pymongo.MongoClient(mongo_uri)
     db_name = os.getenv('MONGODB_DATABASE', 'default_db_name').replace(' ', '_')  
-    if len(db_name) > 38:
-        raise ValueError("Database name exceeds maximum length of 38 characters.")
     db = client[db_name]
     tmdb_api = TMDBApi(api_key=tmdb_api_key)
 
@@ -67,22 +66,34 @@ def fetch_and_save_movie_data(release_date_from, release_date_to):
             logging.warning(f"TMDB ID not found for IMDB ID {imdb_id}. Skipping.")
             continue
 
-        # Fetch and save movie details, reviews, cast and crew
-        save_to_mongo(tmdb_api.get_movie_details(tmdb_id), 'movie_details', db)
-        save_to_mongo(MovieReviewScraper(movie_id=imdb_id).fetch_reviews(), 'movie_reviews', db)
+        try:
+            # Fetch and save movie details
+            movie_details = tmdb_api.get_movie_details(tmdb_id)
+            save_to_mongo(movie_details, 'movie_details', db)
 
-        # Fetch and save cast (actors) and crew (directors)
-        cast_and_crew = tmdb_api.get_cast_and_crew(tmdb_id)
-        if cast_and_crew:
-            for actor in cast_and_crew.get('cast', []):
-                actor['movie_tmdb_id'] = tmdb_id
-                save_to_mongo(actor, 'movie_actor_credits', db)
-                save_to_mongo(tmdb_api.get_person_details(actor['id']), 'actor_details', db)
+            # Fetch and save reviews
+            reviews = MovieReviewScraper(movie_id=imdb_id).fetch_reviews()
+            save_to_mongo(reviews, 'movie_reviews', db)
 
-            for crew_member in cast_and_crew.get('crew', []):
-                if crew_member.get('job') == 'Director':
-                    crew_member['movie_tmdb_id'] = tmdb_id
-                    save_to_mongo(crew_member, 'movie_director_credits', db)
-                    save_to_mongo(tmdb_api.get_person_details(crew_member['id']), 'director_details', db)
+            # Fetch and save cast (actors) and crew (directors)
+            cast_and_crew = tmdb_api.get_cast_and_crew(tmdb_id)
+            if cast_and_crew:
+                for actor in cast_and_crew.get('cast', []):
+                    actor['movie_tmdb_id'] = tmdb_id
+                    save_to_mongo(actor, 'movie_actor_credits', db)
+                    save_to_mongo(tmdb_api.get_person_details(actor['id']), 'actor_details', db)
+
+                for crew_member in cast_and_crew.get('crew', []):
+                    if crew_member.get('job') == 'Director':
+                        crew_member['movie_tmdb_id'] = tmdb_id
+                        save_to_mongo(crew_member, 'movie_director_credits', db)
+                        save_to_mongo(tmdb_api.get_person_details(crew_member['id']), 'director_details', db)
+
+        except Exception as e:
+            # Check if the error is an HTTP 404 error
+            if isinstance(e, HTTPError) and e.response.status_code == 404:
+                logging.warning(f"Movie ID {tmdb_id} not found (404). Skipping.")
+            else:
+                logging.error(f"Error processing movie ID {tmdb_id}: {e}")
     
     logging.info("Finished processing all movies.")

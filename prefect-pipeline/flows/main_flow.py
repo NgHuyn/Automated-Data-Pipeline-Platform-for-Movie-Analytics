@@ -69,10 +69,10 @@ def movie_etl_pipeline():
 if __name__ == "__main__":
     """Main ETL pipeline for movie data"""
     pipeline_1 = manually_etl_pipeline.to_deployment(name="Manually ETL Pipeline",
-                                tags=["pipeline1"],
-                                parameters={"release_date_from": '2024-01-01', "release_date_to": '2024-01-02'})
+                                                     tags=["pipeline1"],
+                                                     parameters={"release_date_from": '2024-01-01', "release_date_to": '2024-01-02'})
     # Get time for schedule
-    anchor_date_str = os.getenv("ANCHOR_DATE", "2024-11-27 19:00:00")  
+    anchor_date_str = os.getenv("ANCHOR_DATE", "2024-11-29 10:00:00")  
     timezone_str = os.getenv("TIMEZONE", "Asia/Saigon")
     saigon_tz = ZoneInfo(timezone_str)
 

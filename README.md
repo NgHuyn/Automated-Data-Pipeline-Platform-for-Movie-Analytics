@@ -85,11 +85,11 @@ The project implements two distinct pipelines:
 git clone https://github.com/NgHuyn/ETL-Data-Pipeline-for-ABSA.git
 cd ETL-Data-Pipeline-for-ABSA
 ```
-2. Create and Configure the `.env` File:
+2. Create and Configure the `.env` file:
 ```bash
 cp env_template .env
 ```
-Populate the `.env`` file with the required details as per the [Prerequisites](#prerequisites):
+Populate the `.env` file with the required details as per the [Prerequisites](#prerequisites):
 ```
 # The Movie Database
 TMDB_API_KEY=<your-tmdb-api-key>

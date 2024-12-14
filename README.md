@@ -141,13 +141,13 @@ make up
   
 ![docker_container](./image/docker_container.png)
 ### Run your data pipeline
-This project uses [Prefect](https://www.prefect.io/) to build and manage the data pipelines. Navigate to the Prefect UI on port 4200 to monitor and manage deployments, you'll see 2 deployments there correspond to 2 data pipelines:
+This project uses [Prefect](https://www.prefect.io/) to build and manage the data pipelines. Navigate to the Prefect UI on port `4200` to monitor and manage deployments, you'll see 2 deployments there correspond to 2 data pipelines:
 #### Pipeline 1 (Manually ETL Pipeline)
 - **Purpose**: Fetch historical data for a specified date range.
 
 - **How to Run**: Trigger it manually by entering the desired date range in the Prefect UI.
   
-**Example UI for Pipeline 1**:
+  **Example UI for Pipeline 1**:
 <div style="display: flex; justify-content: space-between;">
 
 ![pipeline1-a](./image/pipeline1-a.png)
@@ -167,7 +167,7 @@ This project uses [Prefect](https://www.prefect.io/) to build and manage the dat
 
     - Fetches new reviews for these 10 movies from the past 7 days.
 
-**Example UI for Pipeline 2**:
+  **Example UI for Pipeline 2**:
 <div style="display: flex; justify-content: space-between;">
 
 ![pipline2-a](./image/pipeline2-a.png)

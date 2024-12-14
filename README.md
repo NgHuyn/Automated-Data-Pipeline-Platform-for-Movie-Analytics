@@ -1,4 +1,4 @@
-# ETL-Data-Pipeline-for-Aspect-Based-Sentiment-Analysis  
+# ETL-Data-Pipeline-for-Aspect-Based-Sentiment-Analysis 🎥
 
 ## Table of Contents :pushpin:
 - [Overview](#overview)  
@@ -15,7 +15,7 @@
 
 ## Overview  
 
-This project presents a robust **ETL (Extract, Transform, Load) data pipeline** tailored for developing an **Aspect-Based Sentiment Analysis (ABSA)** model. By leveraging reviews from IMDB and detailed metadata from The Movie Database (TMDB) API, the pipeline automates the collection, transformation, and storage of movie data in a structured, accessible format.  
+This project presents a robust **ETL (Extract, Transform, Load)** data pipeline tailored for developing an **Aspect-Based Sentiment Analysis (ABSA)** model. By leveraging reviews from IMDB and detailed metadata from The Movie Database (TMDB) API, the pipeline automates the collection, transformation, and storage of movie data in a structured, accessible format. 
 
 ### Key Objectives
 1. Automate data workflows for scalability and efficiency.  
@@ -25,15 +25,12 @@ This project presents a robust **ETL (Extract, Transform, Load) data pipeline** 
 ### Project Structure  
 - **Data Sources**:  
   - **IMDB**: Provides user reviews for aspect-based analysis.  
-  - **TMDB**: Supplies metadata, including genres, cast, crew, and popularity scores.  
+  - **TMDB**: Supplies metadata, including genres, cast, crew, revenue, and popularity... 
 
 - **Data Pipeline**:  
   1. **Extract**: Fetch reviews from IMDB and metadata from TMDB.  
   2. **Transform**: Clean, preprocess, and enhance data using Python scripts.  
   3. **Load**: Store transformed data into PostgreSQL for analysis and visualization.  
-
-- **Visualization**:  
-  Leverage Power BI to design insightful dashboards, enabling stakeholders to explore trends and sentiment dynamics visually.  
 
 ### Design Architecture  
 This project integrates modern tools for a seamless data pipeline:
@@ -63,7 +60,6 @@ To set up and run the pipeline, ensure you have the following:
 - **MongoDB Atlas Account**: Register for free [here](https://www.mongodb.com/cloud/atlas/register).  
 
 ---
-
 ## Features  
 
 The project implements two distinct pipelines:  
@@ -72,9 +68,13 @@ The project implements two distinct pipelines:
    - Triggered manually through the Prefect UI.  
 
 2. **Automated ETL Pipeline**:  
-   - Runs automatically every 7 days.  
-   - Updates weekly data and fetches reviews for the top 10 most popular movies based on TMDB popularity scores.  
-
+    - **Run Frequency**: Automatically triggers every 7 days.
+    - **Functionality**:
+      1. **Add New Movies**:
+         - Fetches data (reviews, genres, cast, crew, and other metadata) for movies released in the past 7 days and integrates them into the database.
+      2. **Targeted Updates for Popular Movies**:
+         - Prioritizes updating reviews for the **top 10 most popular movies** from the past 7 days (based on `popularity` scores).
+         - After completing these updates, recalculates and updates the new list of the top 10 popular movies.
 ---
 
 ## Installation  

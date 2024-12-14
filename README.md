@@ -180,9 +180,14 @@ This project uses [Prefect](https://www.prefect.io/) to build and manage the dat
 
 ## Future Work
 Planned updates include:
-- Aspect-Based Sentiment Analysis Model: Build and integrate ABSA models using movie reviews.
-- Real-Time Updates: Implement near-real-time review analysis.
-- Advanced Visualization: Create dynamic visualizations for movie trends and audience sentiment.
+
+- **Aspect-Based Sentiment Analysis Model**: Build and integrate ABSA models using movie reviews to extract fine-grained sentiment insights.
+
+- **Enhanced Movie Updates**: Expand update coverage to include movie details such as revenue, popularity, and more, in addition to reviews.
+
+- **Comprehensive Updates**: Apply updates to all movies in the database, not just the top 10 most popular movies.
+
+- **UI for Model Deployment**: Develop a user-friendly interface for deploying sentiment analysis models.
 ## Contributors
 <table>
   <tbody>

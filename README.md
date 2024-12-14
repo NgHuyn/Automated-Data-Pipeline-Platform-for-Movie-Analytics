@@ -82,7 +82,7 @@ The project implements two distinct pipelines:
 ### Set up Environment   
 1. Clone this repository:
 ```bash
-git clone [https://github.com/NgHuyn/ETL-Data-Pipeline-for-ABSA.git
+git clone https://github.com/NgHuyn/ETL-Data-Pipeline-for-ABSA.git
 cd ETL-Data-Pipeline-for-ABSA
 ```
 2. Create a .env file based on the provided template:

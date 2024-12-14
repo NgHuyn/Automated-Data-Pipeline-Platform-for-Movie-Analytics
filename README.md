@@ -85,21 +85,48 @@ The project implements two distinct pipelines:
 git clone https://github.com/NgHuyn/ETL-Data-Pipeline-for-ABSA.git
 cd ETL-Data-Pipeline-for-ABSA
 ```
-2. Create a .env file based on the provided template:
+2. Create and Configure the `.env` File:
 ```bash
 cp env_template .env
 ```
-Fill in the required details as per the [Prerequisites](#prerequisites).
+Populate the `.env`` file with the required details as per the [Prerequisites](#prerequisites):
+```
+# The Movie Database
+TMDB_API_KEY=<your-tmdb-api-key>
+
+# MongoDB
+MONGODB_USER=<your-mongodb-user>
+MONGODB_PASSWORD=<your-mongodb-password>
+MONGODB_SRV=<your-mongodb-server>
+MONGODB_DATABASE=<your-mongodb-database>
+MONGO_URI=mongodb+srv://<your-mongodb-user>:<your-mongodb-password>@<your-mongodb-server>.rdjgn.mongodb.net/
+
+# PostgreSQ
+POSTGRES_USER=<your-postgres-user>
+POSTGRES_PASSWORD=<your-postgres-password>
+POSTGRES_DB=<your-postgres-database>
+POSTGRES_HOST=postgres_container
+POSTGRES_PORT=5432
+
+# pgAdmin
+PGADMIN_DEFAULT_EMAIL=<your-pgadmin-email>
+PGADMIN_DEFAULT_PASSWORD=<your-pgadmin-password>
+
+# Schedule
+ANCHOR_DATE=<your-schedule> 
+TIMEZONE=<your-timezone> 
+```
+> Note:
+> - For `pgAdmin`, you can set any email and password.
+> - The `ANCHOR_DATE` and `TIMEZONE` is used for scheduling Pipeline 2. If left unset, it defaults to `2024-11-29 10:00:00` with the `Asia/Saigon` timezone.
 
 3. Build Docker images:
 ```bash
 make build
 ```
-> Note: if you don't have WSL (Ubuntu) in your terminal, you can install it to use `make-`. Or just use the corresponding replace statement in the [Makefile](./Makefile)
+> Note: If you don’t have make installed, you can use the corresponding commands in the [Makefile](./Makefile). **If you encounter issues, restart Docker or remove existing images and try again.**
 
-**If you encounter issues, restart Docker or remove the existing image and try again.**
-
-This process might take a few minutes, so just chill and take a cup of coffee :coffee:
+The build process may take a few minutes—grab a cup of coffee while you wait! :coffee:
 
 4. Start the system:
 ```bash
@@ -114,11 +141,13 @@ make up
   
 ![docker_container](./image/docker_container.png)
 ### Run your data pipeline
-We use [Prefect](https://www.prefect.io/) to build our data pipeline. When you check out port `4200`, you'll see
-prefect UI, let's go to Deployment section, you'll see 2 deployments there correspond to 2 data pipelines
+This project uses [Prefect](https://www.prefect.io/) to build and manage the data pipelines. Navigate to the Prefect UI on port 4200 to monitor and manage deployments, you'll see 2 deployments there correspond to 2 data pipelines:
 #### Pipeline 1 (Manually ETL Pipeline)
-- Use this pipeline to fetch historical data.
-- Trigger it manually by entering the desired date range.
+- **Purpose**: Fetch historical data for a specified date range.
+
+- **How to Run**: Trigger it manually by entering the desired date range in the Prefect UI.
+  
+**Example UI for Pipeline 1**:
 <div style="display: flex; justify-content: space-between;">
 
 ![pipeline1-a](./image/pipeline1-a.png)
@@ -128,9 +157,17 @@ prefect UI, let's go to Deployment section, you'll see 2 deployments there corre
 </div>
 
 #### Pipeline 2 (ETL pipeline)
-- Runs automatically every 7 days to update movie data and reviews.
-- Initially fetches all movie data; subsequently, it updates the top 10 most popular movies weekly.
+- **Purpose**: Automatically updates movie data and reviews every 7 days.
 
+- **Initial Run**: Fetches all movie data and reviews.
+
+- **Subsequent Runs**:
+
+    - Updates the top 10 most popular movies based on popularity.
+
+    - Fetches new reviews for these 10 movies from the past 7 days.
+
+**Example UI for Pipeline 2**:
 <div style="display: flex; justify-content: space-between;">
 
 ![pipline2-a](./image/pipeline2-a.png)

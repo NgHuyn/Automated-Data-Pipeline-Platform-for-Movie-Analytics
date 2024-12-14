@@ -89,7 +89,7 @@ cd ETL-Data-Pipeline-for-ABSA
 ```bash
 cp env_template .env
 ```
-Fill in the required details as per the [Prerequisite](#prerequisite).
+Fill in the required details as per the [Prerequisites](#prerequisites).
 
 3. Build Docker images:
 ```bash

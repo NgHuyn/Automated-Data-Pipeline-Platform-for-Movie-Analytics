@@ -17,8 +17,6 @@ class MovieReviewScraper(BaseScraper):
         self.clicks = 0  # Initialize click counter
         self.movie_info = { 
             'Movie ID': movie_id,
-            # 'Total Reviews': total_reviews,
-            # 'Last Date Review': last_date_review,
             'Reviews': []
         }
         self.total_reviews = total_reviews
@@ -73,18 +71,14 @@ class MovieReviewScraper(BaseScraper):
                 if total_reviews - num_reviews != 0:
                     self.logger.warning('Missing %d reviews', total_reviews - num_reviews)
                 self.logger.info('Movie %s has %d/%d reviews', self.movie_id, num_reviews, total_reviews)
-
-                # self.movie_info['Last Date Review'] = self.movie_info['Reviews'][0]['Date'] #updating last date review
+                
                 for i in range(len(self.movie_info['Reviews'])):
                     if 'Date' in self.movie_info['Reviews'][i] and self.movie_info['Reviews'][i]['Date']:
-                        # self.movie_info['Last Date Review'] = self.movie_info['Reviews'][i]['Date'] #updating last date review
                         self.last_date_review = self.movie_info['Reviews'][i]['Date'] #updating last date review
 
                         break  
                     else:
                         self.logger.warning(f"Review {i} is missing a date.")
-                # self.movie_info['Total Reviews'] = num_reviews #updating new total reviews
-                # self.total_reviews = num_reviews #updating new total reviews
 
 
             except Exception as e:
@@ -191,7 +185,7 @@ class MovieReviewScraper(BaseScraper):
         reviews = soup.select('article.user-review-item')
 
         # If no reviews found, try to load more reviews
-        if not reviews:  # Attempt to load more reviews
+        if not reviews:  
             reviews = soup.select('div.lister-item.mode-detail.imdb-user-review')
             if not reviews:  # If still no reviews available
                 self.logger.warning(f"No reviews found for {movie_id}.")
@@ -206,9 +200,6 @@ class MovieReviewScraper(BaseScraper):
             
             try:
                 if last_date is not None:
-                    # last_date = datetime.strptime(last_date, "%Y-%m-%d")
-                    # if parsed_review['Date'] <= last_date:
-                    #     break
                     if count >= new_reviews_count:
                         break
             except Exception:
@@ -257,7 +248,8 @@ class MovieReviewScraper(BaseScraper):
             review_date = self.convert_date_format(review.select_one('span.review-date').get_text(strip=True), button_type) if review.select_one('span.review-date') else 'No date'
         else:
             review_rating = review.select_one('span.ipc-rating-star--rating').get_text(strip=True) if review.select_one('span.ipc-rating-star--rating') else 'No rating'
-            review_summary = review.select_one('span[data-testid="review-summary"]').get_text(strip=True) if review.select_one('span[data-testid="review-summary"]') else 'No summary'
+            review_summary = review.select_one('h3.ipc-title__text')
+            review_summary = review_summary.get_text(strip=True) if review_summary else 'No summary'
             review_text = review.select_one('div.ipc-html-content-inner-div').get_text(strip=True) if review.select_one('div.ipc-html-content-inner-div') else 'No content'
             author_tag = review.select_one('a[data-testid="author-link"]').get_text(strip=True) if review.select_one('a[data-testid="author-link"]') else 'Unknown Author'
             review_date = self.convert_date_format(review.select_one('li.review-date').get_text(strip=True), button_type) if review.select_one('li.review-date') else 'No date'

@@ -74,11 +74,11 @@ if __name__ == "__main__":
     # Get time for schedule
     anchor_date_str = os.getenv("ANCHOR_DATE", "2024-11-29 10:00:00")  
     timezone_str = os.getenv("TIMEZONE", "Asia/Saigon")
-    saigon_tz = ZoneInfo(timezone_str)
+    timezone_tz = ZoneInfo(timezone_str)
 
     try:
         # Convert anchor_date into datetime & apply timezone
-        anchor_date = datetime.strptime(anchor_date_str, "%Y-%m-%d %H:%M:%S").replace(tzinfo=saigon_tz)
+        anchor_date = datetime.strptime(anchor_date_str, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone_tz)
     except ValueError as e:
         logging.error(f"Invalid ANCHOR_DATE format: {e}")
         raise ValueError("ANCHOR_DATE must be in 'YYYY-MM-DD HH:MM:SS' format")

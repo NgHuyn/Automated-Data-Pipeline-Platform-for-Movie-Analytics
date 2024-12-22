@@ -115,7 +115,7 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
             'movie_cast': """
             CREATE TABLE IF NOT EXISTS movie_cast (
                 actor_id INTEGER,
-                character VARCHAR(100),
+                character VARCHAR(255),
                 order_num INTEGER,
                 movie_id INTEGER,
                 FOREIGN KEY (movie_id) REFERENCES movie(movie_id) ON DELETE CASCADE,

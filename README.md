@@ -99,7 +99,7 @@ MONGODB_USER=<your-mongodb-user>
 MONGODB_PASSWORD=<your-mongodb-password>
 MONGODB_SRV=<your-mongodb-server>
 MONGODB_DATABASE=<your-mongodb-database>
-MONGO_URI=mongodb+srv://<your-mongodb-user>:<your-mongodb-password>@<your-mongodb-server>.rdjgn.mongodb.net/
+MONGO_URI=<your-mongodb-uri>
 
 # PostgreSQ
 POSTGRES_USER=<your-postgres-user>

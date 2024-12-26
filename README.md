@@ -175,7 +175,7 @@ This project uses [Prefect](https://www.prefect.io/) to build and manage the dat
 ![pipline2-b](./image/pipeline2-b.png)
 
 ### Power BI Dashboard
-![powerbi](./image/dashboard.jpg)
+![powerbi](./image/dashboard.png)
 > Dashboard could be viewed in [powerbi_dashboard](./dashboard/movie_dashboard.pdf)
 
 ## Future Work

@@ -138,7 +138,10 @@ make up
         - [`localhost:4200`](http://localhost:4200/): Prefect Server
     2. pgAdmin
         - [`localhost:5050`](http://localhost:5050/): pgAdmin
-  
+    3. PostgreSQL
+        - [`localhost:4200`](http://localhost:5432/): PostgreSQL
+
+> Note: We use `pgAdmin` for managing and interacting with our `PostgreSQL` databases.
 ![docker_container](./image/docker_container.png)
 ### Run your data pipeline
 This project uses [Prefect](https://www.prefect.io/) to build and manage the data pipelines. Navigate to the Prefect UI on port `4200` to monitor and manage deployments, you'll see 2 deployments there correspond to 2 data pipelines:

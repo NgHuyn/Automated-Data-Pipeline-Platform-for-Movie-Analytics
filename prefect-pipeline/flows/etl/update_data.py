@@ -20,12 +20,20 @@ def update_db(db, imdb_id, type_update, new_reviews, total_reviews=0, last_date_
         db['movie_reviews'].update_one(
             {'Movie ID': imdb_id},
             {
-                # '$addToSet': {'Reviews': {'$each': new_reviews['Reviews']}, '$position': 0},
                 '$addToSet': {'Reviews': {'$each': new_reviews['Reviews']}}
 
             },
             upsert=True
         )
+    elif type_update == 'insert_db_reviews':
+        try:
+            if isinstance(new_reviews, list):
+                db['movie_reviews'].insert_many(new_reviews, ordered=False)
+            else:
+                db['movie_reviews'].insert_one(new_reviews)
+            logging.info(f"Inserted data into movie_reviews.")
+        except Exception as e:
+            logging.error(f"Error saving to movie_reviews: {e}")
     elif type_update == 'update_db_top_popular': 
         db['top_popular_movies'].update_one(
             {'imdb_id': imdb_id},
@@ -60,14 +68,17 @@ def update_reviews(db, tmdb_api_key, release_date_from, release_date_to):
         # update reviews for older top 10 popular before updating new top 10
         for movie in existing_movies:
             imdb_id = movie['imdb_id']
+            pre_total_reviews=movie.get('total_reviews')
             # Fetch `last_date_review` and `total_reviews` from database
             try:
                 fetch_reviews = MovieReviewScraper(movie_id=imdb_id, total_reviews=movie.get('total_reviews'), last_date_review=movie.get('last_date_review'))
                 new_reviews = fetch_reviews.fetch_reviews()
 
                 if new_reviews is not None and len(new_reviews['Reviews']) > 0:
-                    # Update the reviews for the db movie_reviews
-                    update_db(db, imdb_id, 'update_db_reviews', new_reviews)
+                    if pre_total_reviews == 0: # if there isn't having any reviews
+                        update_db(db, imdb_id, 'insert_db_reviews', new_reviews)
+                    else: # Update the reviews for the db movie_reviews if the previous had reviews
+                        update_db(db, imdb_id, 'update_db_reviews', new_reviews)
 
                     logging.info(f"Updated top_popular_movies for {imdb_id}.")
                 else:

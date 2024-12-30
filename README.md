@@ -1,4 +1,4 @@
-# ETL-Data-Pipeline-for-Aspect-Based-Sentiment-Analysis 🎥
+# ETL-Data-Pipeline-for-ABSA 🎥
 
 ## Table of Contents :pushpin:
 - [Overview](#overview)  

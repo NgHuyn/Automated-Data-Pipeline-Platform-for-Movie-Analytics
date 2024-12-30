@@ -69,22 +69,3 @@ class TMDBApi:
     def get_director_details(self, crew):
         """Get the details of the director(s) in the crew."""
         return [self.get_person_details(member['id']) for member in crew if member['job'] == 'Director']
-    
-    def get_top_popular_movies(self, top_n=10):
-        """Get the top N popular movies, sorted by popularity."""
-        url = f"{self.base_url}/movie/popular?api_key={self.api_key}&language=en-US&page=1"
-        
-        try:
-            data = self._make_request(url)
-            movies = data.get('results', [])
-            
-            # Sort by 'popularity'
-            sorted_movies = sorted(movies, key=lambda x: x['popularity'], reverse=True)
-            
-            # Retrieve top 10 movies
-            top_movies = sorted_movies[:top_n]
-            return top_movies
-        
-        except Exception as e:
-            logging.error(f"Failed to fetch popular movies: {e}")
-            return []

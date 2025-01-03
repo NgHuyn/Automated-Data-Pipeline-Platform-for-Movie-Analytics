@@ -115,7 +115,7 @@ class MongoDataExtractor:
                             .assign(poster_path=lambda x: x['poster_path'].apply(
                                 lambda p: f"https://image.tmdb.org/t/p/w500{p}" if p else None))
                             .replace({np.nan: None, '': None})
-                            .drop_duplicates(),
+                            .drop_duplicates(subset=['movie_id']),
                 'movie_genre': pd.DataFrame(
                         [(row['id'], g['id']) for _, row in df.iterrows() for g in row['genres']], 
                         columns=['movie_id', 'genre_id']
@@ -126,14 +126,14 @@ class MongoDataExtractor:
                 'actor': df[['id', 'name', 'gender', 'birthday', 'deathday', 'popularity', 'place_of_birth']]
                             .rename(columns={'id': 'actor_id'})
                             .replace({'gender': {0: 'Not set / not specified', 1: 'Female', 2: 'Male', 3: 'Non-binary'}})  
-                            .drop_duplicates()
+                            .drop_duplicates(subset=['actor_id'])
             },
             
             'director_details': lambda df: {
                 'director': df[['id', 'name', 'gender', 'birthday', 'deathday', 'popularity', 'place_of_birth']]
                             .rename(columns={'id': 'director_id'})
                             .replace({'gender': {0: 'Not set / not specified', 1: 'Female', 2: 'Male', 3: 'Non-binary'}})
-                            .drop_duplicates()
+                            .drop_duplicates(subset=['director_id'])
             },  
             
             'movie_actor_credits': lambda df: {

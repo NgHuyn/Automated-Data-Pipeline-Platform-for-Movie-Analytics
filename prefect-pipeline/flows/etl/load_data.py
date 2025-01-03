@@ -146,38 +146,28 @@ def load_data_to_postgres(data: pd.DataFrame, table_name: str):
         # Create the tables in order 
         create_tables_in_order(conn, table_queries)
 
-        # Check if the table is empty for 'genre'
-        if table_name == 'genre' and not is_table_empty(conn, table_name):
-            logging.info(f"Table {table_name} already has data. Skipping data load.")
-            return
-
-        # Filter existing IDs for actor and director tables
-        if table_name == 'actor':
-            id_column = 'actor_id'
-        elif table_name == 'director':
-            id_column = 'director_id'
-        elif table_name == 'movie':
-            id_column = 'movie_id'
-        else:
-            id_column = None
-
-        if id_column:
-            data_ids = data[id_column].tolist()
-            filtered_ids = filter_existing_ids(conn, table_name, id_column, data_ids)
+        # Filter existing IDs for actor, director, and movie tables
+        if table_name in ['actor', 'director', 'movie']:
+            id_column = f"{table_name}_id"  # Dynamic ID column based on table name
+            data_ids = data[id_column].tolist()  # Get all IDs from the input data
+            filtered_ids = filter_existing_ids(conn, table_name, id_column, data_ids)  # Filter out existing IDs
+            
+            # Filter DataFrame to keep rows with ID not existed
             data = data[data[id_column].isin(filtered_ids)]
 
-        # Insert data into the table
-        if not data.empty:
-            insert_query = f"INSERT INTO {table_name} ({', '.join(data.columns)}) VALUES %s"
-            with conn.cursor() as cursor:
-                execute_values(cursor, insert_query, data.values.tolist())
-            conn.commit()
-            logging.info(f"Data loaded successfully into {table_name}.")
-        else:
+        # If there are not any new data, then insert 
+        if data.empty:
             logging.info(f"No new data to load into {table_name}.")
+            return
+
+        # Insert data into the table
+        insert_query = f"INSERT INTO {table_name} ({', '.join(data.columns)}) VALUES %s"
+        with conn.cursor() as cursor:
+            execute_values(cursor, insert_query, data.values.tolist())
+        conn.commit()
+        logging.info(f"Data loaded successfully into {table_name}.")
     except Exception as e:
         logging.error(f"Error loading data into {table_name}: {e}", exc_info=True)
         conn.rollback()
     finally:
         conn.close()
-

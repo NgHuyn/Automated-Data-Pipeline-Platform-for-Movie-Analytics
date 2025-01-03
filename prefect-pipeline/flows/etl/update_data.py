@@ -12,7 +12,7 @@ def check_top_popular_movies(db):
 
 def get_top_10_movies(release_date_from, release_date_to):
     # current popular movies
-    popular_movies = MoviesScraper(release_date_from, release_date_to).fetch_movies(limit=15)
+    popular_movies = MoviesScraper(release_date_from, release_date_to).fetch_movies(limit=30)
     return popular_movies
 
 def update_db(db, imdb_id, type_update, new_reviews, total_reviews=0, last_date_review=None):

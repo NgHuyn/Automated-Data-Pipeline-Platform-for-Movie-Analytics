@@ -44,7 +44,7 @@ Steps:
 4. **Storage**: Load structured data into **PostgreSQL**.  
 5. **Visualization**: Build and update dashboards with Power BI.  
 
-![Architecture](./image/data_pipeline.png)  
+![Architecture](./image/data_architecture.png)  
 
 ### Data Schema  
 The project adopts a relational schema capturing key relationships among entities such as movies, reviews, actors, and directors.  

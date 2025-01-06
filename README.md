@@ -1,4 +1,4 @@
-# ETL-Data-Pipeline-for-ABSA 🎥
+# Automated Data Pipeline Platform for Movie Analytics 🎥
 
 ## Table of Contents :pushpin:
 - [Overview](#overview)  

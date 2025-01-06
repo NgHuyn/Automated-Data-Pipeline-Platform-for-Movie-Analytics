@@ -1,4 +1,4 @@
-# ETL-Data-Pipeline-for-ABSA 🎥
+# Automated Data Pipeline Platform for Movie Analytics 🎥
 
 ## Table of Contents :pushpin:
 - [Overview](#overview)  
@@ -101,7 +101,7 @@ MONGODB_SRV=<your-mongodb-server>
 MONGODB_DATABASE=<your-mongodb-database>
 MONGO_URI=<your-mongodb-uri>
 
-# PostgreSQ
+# PostgreSQL
 POSTGRES_USER=<your-postgres-user>
 POSTGRES_PASSWORD=<your-postgres-password>
 POSTGRES_DB=<your-postgres-database>

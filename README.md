@@ -153,9 +153,9 @@ This project uses [Prefect](https://www.prefect.io/) to build and manage the dat
   **Example UI for Pipeline 1**:
 <div style="display: flex; justify-content: space-between;">
 
-![pipeline1-a](./image/pipeline1-a.png)
+![pipeline1-a](./image/pipeline1_a.png)
 
-![pipeline1-b](./image/pipeline1-b.png)
+![pipeline1-b](./image/pipeline1_b.png)
 
 </div>
 
@@ -173,12 +173,12 @@ This project uses [Prefect](https://www.prefect.io/) to build and manage the dat
   **Example UI for Pipeline 2**:
 <div style="display: flex; justify-content: space-between;">
 
-![pipline2-a](./image/pipeline2-a.png)
+![pipline2-a](./image/pipeline2_a.png)
 
-![pipline2-b](./image/pipeline2-b.png)
+![pipline2-b](./image/pipeline2_b.png)
 
 ### Power BI Dashboard
-![powerbi](./image/dashboard.png)
+![powerbi](./image/movie_dashboard.png)
 > Dashboard could be viewed in [powerbi_dashboard](./dashboard/movie_dashboard.pdf)
 
 ## Future Work

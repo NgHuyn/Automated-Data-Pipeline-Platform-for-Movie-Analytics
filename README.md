@@ -1,5 +1,5 @@
 # Automated Data Pipeline Platform for Movie Analytics 🎥
-dev
+feature/model
 
 ## Table of Contents :pushpin:
 - [Overview](#overview)  
